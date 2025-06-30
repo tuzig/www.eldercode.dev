@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -41,50 +42,62 @@ const Index = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const stats = [
-    { number: "100+", label: "no-code MVPs transformed into scalable global platforms" },
-    { number: "99.9%", label: "uptime guaranteed — enterprise-grade reliability from day one" },
-    { number: "$50M+", label: "in funding raised by our clients after transformation" }
+  const confidenceStats = [
+    "Used by startups scaling beyond Bubble & Glide",
+    "Deployed on AWS, Vercel, and Firebase", 
+    "Built to withstand 10k+ concurrent users from Day 1"
   ];
 
   const services = [
     {
       icon: Code2,
-      title: "Code Refactoring",
-      description: "From visual logic to maintainable codebases — we translate your logic into React, Node, or your stack of choice."
+      title: "Code Rebuilds",
+      description: "We convert no-code logic into structured codebases (React, Next.js, Node, Firebase, Supabase)."
     },
     {
       icon: Zap,
-      title: "DevOps & CI/CD Setup",
-      description: "Automated deploys, rollback safety, test environments — engineered with GitHub Actions, AWS Amplify, or Vercel pipelines."
+      title: "DevOps & CI/CD Pipelines",
+      description: "Auto deploys, rollback safety, GitHub Actions, Vercel, Amplify."
     },
     {
       icon: Shield,
-      title: "Security Hardening",
-      description: "We audit your app against OWASP Top 10 and common low-code platform vulnerabilities. Everything from auth misconfigurations to insecure data flows."
+      title: "Security & Compliance",
+      description: "We audit your app and rebuild with OWASP, SOC2, GDPR in mind."
     },
     {
-      icon: Cloud,
-      title: "Cloud Migration & API Integration",
-      description: "Move your data and logic from limited app builders to AWS, Supabase, Firebase, or other modern stacks — fully documented."
+      icon: BarChart3,
+      title: "Performance Scaling",
+      description: "Optimize cold starts, DB queries, edge caching, queues."
     },
     {
       icon: Users,
-      title: "Product-Led Engineering",
-      description: "We work alongside your PMs and designers to ensure the transition retains UX fidelity, while unlocking performance and observability."
+      title: "UX-Perfect Replatforming",
+      description: "Maintain design fidelity while unlocking full flexibility."
     }
   ];
 
-  const integrations = [
-    { name: "Stripe", description: "Global Payments + Billing" },
-    { name: "Auth0", description: "Enterprise-Grade Security" },
-    { name: "Airtable", description: "Scale Your Data Operations" },
-    { name: "Firebase", description: "Real-time Global Infrastructure" },
-    { name: "HubSpot", description: "Enterprise Sales & Marketing" },
-    { name: "OpenAI", description: "AI-Powered Business Intelligence" },
-    { name: "AWS S3", description: "Global Content Delivery" },
-    { name: "Amplitude", description: "Enterprise Analytics" },
-    { name: "Vercel", description: "Global Edge Deployment" }
+  const lowCodePlatforms = [
+    "Bubble", "Adalo", "Webflow", "Glide", "Softr", "Framer", "Bravo Studio", "Thunkable"
+  ];
+
+  const techStack = [
+    "AWS (EC2, S3, RDS)", "Supabase", "Firebase", "Vercel", "Cloudflare", 
+    "Postgres", "Stripe", "Auth0", "Clerk", "Segment", "Amplitude", "OpenAI", "GitHub CI/CD"
+  ];
+
+  const affirmations = [
+    "Your MVP got you customers. Now it needs to survive them.",
+    "No-code isn't a dead-end. It's your launchpad.",
+    "You don't need to rewrite everything. Just the parts that matter.",
+    "Start with speed. Scale with structure."
+  ];
+
+  const auditChecklist = [
+    "Code architecture issues",
+    "Security risks", 
+    "Scaling bottlenecks",
+    "Database strategy suggestions",
+    "Migration pathway options"
   ];
 
   return (
@@ -94,20 +107,20 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="text-2xl font-bold text-brand-700">
-              No-Code → Global Scale
+              From Prototype to Global-Scale
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-surface-600 hover:text-brand-600 transition-colors">Services</a>
-              <a href="#integrations" className="text-surface-600 hover:text-brand-600 transition-colors">Integrations</a>
+              <a href="#integrations" className="text-surface-600 hover:text-brand-600 transition-colors">Tech Stack</a>
               <a href="#contact" className="text-surface-600 hover:text-brand-600 transition-colors">Contact</a>
-              <Button size="sm">Start Free Audit</Button>
+              <Button size="sm">Get Free Audit</Button>
             </div>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-32 relative overflow-hidden">
+      <section className="pt-20 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
@@ -116,55 +129,49 @@ const Index = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
               </span>
-              Your No-Code MVP → Global Business Success
+              Your No-Code MVP Was Just the Beginning
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-surface-900 mb-6 text-balance">
-              Get a Free <span className="text-brand-600">Code Analysis</span> — Transform Your Vision Into Reality
+              Turn Your App Into a <span className="text-brand-600">Real Business Infrastructure</span>
             </h1>
             <p className="text-xl text-surface-600 mb-8 max-w-3xl mx-auto text-pretty">
-              Your no-code prototype proves the concept. Now let's build the infrastructure that scales globally. We'll identify optimization opportunities, enterprise-grade improvements, and pathways to million-user success.
+              We help founders transition from low-code platforms to production-ready, scalable software with full DevOps, security, and performance architecture.
             </p>
-            <Button size="lg" className="text-lg px-8 py-6 group">
-              Run Free Code Analysis
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="text-lg px-8 py-6 group">
+                Get a Free Code & Security Audit
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                See Case Studies
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
+      {/* Confidence Strip */}
+      <section className="py-12 bg-brand-600 text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
-            <h2 className="text-4xl font-bold text-surface-900 mb-6">
-              No-Code Validates Your Idea. We Scale It to the World.
-            </h2>
-            <p className="text-lg text-surface-600 text-pretty">
-              Every global business started with an idea. Your no-code MVP proves that idea works. Now it's time to build the foundation that supports millions of users, handles enterprise customers, and scales across continents. We transform promising prototypes into market-leading platforms.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow animate-scale-up" style={{ animationDelay: `${index * 100}ms` }}>
-                <CardContent className="pt-8 pb-6">
-                  <div className="text-3xl font-bold text-brand-600 mb-2">{stat.number}</div>
-                  <p className="text-surface-600 text-sm">{stat.label}</p>
-                </CardContent>
-              </Card>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            {confidenceStats.map((stat, index) => (
+              <div key={index} className="animate-fade-up" style={{ animationDelay: `${index * 100}ms` }}>
+                <p className="font-medium">{stat}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-surface-50">
+      <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-up">
-            <h2 className="text-4xl font-bold text-surface-900 mb-6">What We Do Best</h2>
+            <h2 className="text-4xl font-bold text-surface-900 mb-6">We Make Your Product Real</h2>
+            <p className="text-lg text-surface-600">From fragile prototypes to hardened platforms — with speed, transparency, and bulletproof architecture.</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
             {services.map((service, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-scale-up" style={{ animationDelay: `${index * 100}ms` }}>
                 <CardContent className="p-8">
@@ -175,26 +182,119 @@ const Index = () => {
               </Card>
             ))}
           </div>
+
+          <div className="text-center bg-surface-50 py-8 px-6 rounded-lg">
+            <p className="text-xl font-medium text-surface-900 italic">
+              "You built fast. Now we help you grow without breaking."
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Integrations Section */}
-      <section id="integrations" className="py-20 bg-white">
+      <section id="integrations" className="py-20 bg-surface-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
-            <h2 className="text-4xl font-bold text-surface-900 mb-6">Enterprise Integrations for Global Success</h2>
-            <p className="text-xl text-surface-600 mb-4">From startup to IPO — we connect everything you need.</p>
-            <p className="text-lg text-surface-600 text-pretty">
-              No-code platforms get you started, but global businesses need enterprise integrations. We connect your platform to payment processors, CRMs, analytics, AI services, and infrastructure that Fortune 500 companies rely on.
-            </p>
+            <h2 className="text-4xl font-bold text-surface-900 mb-6">We Speak Both Languages: Low-Code + Full Stack</h2>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {integrations.map((integration, index) => (
-              <Card key={index} className="border border-surface-200 hover:border-brand-300 transition-all duration-300 hover:shadow-md animate-scale-up" style={{ animationDelay: `${index * 50}ms` }}>
-                <CardContent className="p-6 text-center">
-                  <h4 className="font-semibold text-surface-900 mb-1">{integration.name}</h4>
-                  <p className="text-xs text-surface-600">{integration.description}</p>
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Low-Code Platforms */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-surface-900 mb-6">Low-Code Platforms We Transition From:</h3>
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {lowCodePlatforms.map((platform, index) => (
+                    <div key={index} className="bg-surface-100 rounded-lg p-3 text-center text-sm font-medium">
+                      {platform}
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-surface-600">We export, document, and migrate your app's logic and data</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-surface-600">We respect your original flow, but rebuild for scale</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-surface-600">We can gradually swap components (e.g., database first, then frontend)</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Tech Stack */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-surface-900 mb-6">Technologies We Deploy To:</h3>
+                <div className="grid grid-cols-1 gap-2 mb-6">
+                  {techStack.map((tech, index) => (
+                    <div key={index} className="bg-brand-50 border border-brand-200 rounded-lg p-3 text-sm font-medium text-brand-800">
+                      {tech}
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-surface-600">Deploy-ready infrastructure built for real traffic</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-surface-600">Modern auth, observability, async flows, and API integrations</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-surface-600">We document every step for internal handover</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-8">
+            <Button variant="outline" size="lg">
+              → View Full Tech Stack Compatibility
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 shadow-xl bg-gradient-to-r from-brand-600 to-brand-700 text-white animate-scale-up">
+              <CardContent className="p-12 text-center">
+                <h2 className="text-3xl font-bold mb-6">From Bubble to a 7-Figure SaaS in 90 Days</h2>
+                <p className="text-lg mb-8 opacity-90 text-pretty">
+                  A global B2B startup came to us with a Bubble MVP. We transitioned it into a React + Supabase system with full auth, billing, email infrastructure, and metrics observability. They closed their first Fortune 100 client within 60 days of launch.
+                </p>
+                <blockquote className="text-2xl font-medium italic mb-4">
+                  "We thought we were just validating. Turns out we were building a real business — and these guys made it happen."
+                </blockquote>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Affirmations Section */}
+      <section className="py-20 bg-surface-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-up">
+            <h2 className="text-4xl font-bold text-surface-900 mb-6">From Idea → Impact → Infrastructure</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {affirmations.map((affirmation, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-up" style={{ animationDelay: `${index * 100}ms` }}>
+                <CardContent className="p-8 text-center">
+                  <p className="text-lg font-medium text-surface-900">{affirmation}</p>
                 </CardContent>
               </Card>
             ))}
@@ -202,22 +302,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Case Study Section */}
-      <section className="py-20 bg-gradient-to-r from-brand-600 to-brand-700 text-white">
+      {/* Lead Magnet Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h2 className="text-4xl font-bold mb-6">From No-Code MVP to $10M Series A</h2>
-            <p className="text-lg mb-8 opacity-90 text-pretty">
-              A fintech startup came to us with a Bubble prototype handling 100 users. Within 6 months, we transformed it into a React + Firebase platform serving 50,000+ users across 15 countries. They closed their Series A three months later.
+          <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-up">
+            <h2 className="text-4xl font-bold text-surface-900 mb-6">Not Sure If You're Ready to Scale?</h2>
+            <p className="text-xl text-surface-600 mb-8">
+              Upload your app export or give us read access — we'll return a free 24h report covering:
             </p>
-            <blockquote className="text-2xl font-medium italic mb-4">
-              "They didn't just migrate our code — they gave us the infrastructure to become a global business. Our investors were blown away by our technical foundation."
-            </blockquote>
-            <div className="flex items-center justify-center space-x-2">
-              {[...Array(5)].map((_, i) => (
-                <CheckCircle2 key={i} className="h-5 w-5 text-yellow-300" />
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {auditChecklist.map((item, index) => (
+                <div key={index} className="flex items-center space-x-3 bg-surface-50 p-4 rounded-lg">
+                  <CheckCircle2 className="h-5 w-5 text-brand-600 flex-shrink-0" />
+                  <span className="text-surface-900 font-medium">{item}</span>
+                </div>
               ))}
             </div>
+            
+            <Button size="lg" className="text-lg px-8 py-6 group">
+              Run Free Code Analysis
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
@@ -227,9 +333,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12 animate-fade-up">
-              <h2 className="text-4xl font-bold text-surface-900 mb-6">Ready to Scale Your Vision Globally?</h2>
+              <h2 className="text-4xl font-bold text-surface-900 mb-6">Ready to Scale Your Vision?</h2>
               <p className="text-lg text-surface-600">
-                Get a free code analysis today and discover how to transform your no-code MVP into enterprise-grade infrastructure that scales worldwide.
+                Get a free code analysis today and discover how to transform your prototype into enterprise-grade infrastructure.
               </p>
             </div>
             
@@ -267,7 +373,7 @@ const Index = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-surface-900 mb-2 block">Describe Your App</label>
+                    <label className="text-sm font-medium text-surface-900 mb-2 block">Brief App Description</label>
                     <Textarea
                       value={formData.description}
                       onChange={(e) => handleInputChange("description", e.target.value)}
@@ -277,7 +383,7 @@ const Index = () => {
                     />
                   </div>
                   <Button type="submit" size="lg" className="w-full">
-                    Start My Free Audit
+                    Book Free Review Call
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </form>
@@ -292,17 +398,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">No-Code → Global Scale</h3>
+              <h3 className="text-2xl font-bold mb-4">From Prototype to Global-Scale</h3>
               <p className="text-surface-300 text-sm">
-                We transform no-code MVPs into global businesses — fast, secure, and built to scale worldwide.
+                We transform no-code MVPs into real business infrastructure — fast, secure, and built to scale worldwide.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#services" className="text-surface-300 hover:text-white transition-colors">Services</a></li>
-                <li><a href="#integrations" className="text-surface-300 hover:text-white transition-colors">Integrations</a></li>
-                <li><a href="#contact" className="text-surface-300 hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#integrations" className="text-surface-300 hover:text-white transition-colors">Tech Stack</a></li>
+                <li><a href="#contact" className="text-surface-300 hover:text-white transition-colors">Case Studies</a></li>
               </ul>
             </div>
             <div>
@@ -328,7 +434,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-surface-800 pt-8 text-center text-sm text-surface-400">
-            <p>&copy; 2024 No-Code to Global Scale. All rights reserved.</p>
+            <p>&copy; 2024 From Prototype to Global-Scale. All rights reserved.</p>
           </div>
         </div>
       </footer>
