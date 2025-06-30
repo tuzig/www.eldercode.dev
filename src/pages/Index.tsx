@@ -120,10 +120,10 @@ const Index = () => {
               From MVP to Enterprise-Ready
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-surface-900 mb-6 text-balance">
-              Get a Free <span className="text-brand-600">Code Analysis</span> — Find Issues Before They Cost You
+              Get a Free <span className="text-brand-600">Code Analysis</span> — Unlock Your App's Full Potential
             </h1>
             <p className="text-xl text-surface-600 mb-8 max-w-3xl mx-auto text-pretty">
-              Upload your current low-code app or export — we'll scan for architectural bottlenecks, security vulnerabilities, and performance risks. No strings attached.
+              Upload your current low-code app or export — we'll identify optimization opportunities, scalability improvements, and growth enablers. Discover what's possible.
             </p>
             <Button size="lg" className="text-lg px-8 py-6 group">
               Run Free Code Analysis
