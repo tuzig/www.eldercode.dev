@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -43,9 +42,9 @@ const Index = () => {
   };
 
   const stats = [
-    { number: "100+", label: "apps transformed from MVPs to market-ready products" },
-    { number: "99.9%", label: "uptime guaranteed on AWS-backed deployments" },
-    { number: "SOC2", label: "ready architectures by default" }
+    { number: "100+", label: "no-code MVPs transformed into scalable global platforms" },
+    { number: "99.9%", label: "uptime guaranteed — enterprise-grade reliability from day one" },
+    { number: "$50M+", label: "in funding raised by our clients after transformation" }
   ];
 
   const services = [
@@ -77,15 +76,15 @@ const Index = () => {
   ];
 
   const integrations = [
-    { name: "Stripe", description: "Payments + Billing Automation" },
-    { name: "Auth0", description: "Secure Auth Migration" },
-    { name: "Airtable", description: "Legacy DB → Scalable DB Sync" },
-    { name: "Firebase", description: "Realtime Database, Notifications" },
-    { name: "HubSpot", description: "Marketing & Sales Sync" },
-    { name: "OpenAI", description: "Embed AI into your app workflows" },
-    { name: "AWS S3", description: "Media Storage + CDN" },
-    { name: "Amplitude", description: "Analytics Instrumentation" },
-    { name: "Vercel", description: "CI/CD Pipelines" }
+    { name: "Stripe", description: "Global Payments + Billing" },
+    { name: "Auth0", description: "Enterprise-Grade Security" },
+    { name: "Airtable", description: "Scale Your Data Operations" },
+    { name: "Firebase", description: "Real-time Global Infrastructure" },
+    { name: "HubSpot", description: "Enterprise Sales & Marketing" },
+    { name: "OpenAI", description: "AI-Powered Business Intelligence" },
+    { name: "AWS S3", description: "Global Content Delivery" },
+    { name: "Amplitude", description: "Enterprise Analytics" },
+    { name: "Vercel", description: "Global Edge Deployment" }
   ];
 
   return (
@@ -95,7 +94,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="text-2xl font-bold text-brand-700">
-              MVP → Enterprise
+              No-Code → Global Scale
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-surface-600 hover:text-brand-600 transition-colors">Services</a>
@@ -117,13 +116,13 @@ const Index = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
               </span>
-              From MVP to Enterprise-Ready
+              Your No-Code MVP → Global Business Success
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-surface-900 mb-6 text-balance">
-              Get a Free <span className="text-brand-600">Code Analysis</span> — Unlock Your App's Full Potential
+              Get a Free <span className="text-brand-600">Code Analysis</span> — Transform Your Vision Into Reality
             </h1>
             <p className="text-xl text-surface-600 mb-8 max-w-3xl mx-auto text-pretty">
-              Upload your current low-code app or export — we'll identify optimization opportunities, scalability improvements, and growth enablers. Discover what's possible.
+              Your no-code prototype proves the concept. Now let's build the infrastructure that scales globally. We'll identify optimization opportunities, enterprise-grade improvements, and pathways to million-user success.
             </p>
             <Button size="lg" className="text-lg px-8 py-6 group">
               Run Free Code Analysis
@@ -138,10 +137,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
             <h2 className="text-4xl font-bold text-surface-900 mb-6">
-              Low-Code Gets You Started. We Get You Ready for Scale.
+              No-Code Validates Your Idea. We Scale It to the World.
             </h2>
             <p className="text-lg text-surface-600 text-pretty">
-              We specialize in transitioning no-code and low-code applications to production-grade infrastructure. Whether built in Bubble, Adalo, Webflow, or Glide — we analyze, refactor, and deploy your app on robust cloud infrastructure with CI/CD pipelines, proper state management, and enterprise security.
+              Every global business started with an idea. Your no-code MVP proves that idea works. Now it's time to build the foundation that supports millions of users, handles enterprise customers, and scales across continents. We transform promising prototypes into market-leading platforms.
             </p>
           </div>
           
@@ -183,10 +182,10 @@ const Index = () => {
       <section id="integrations" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
-            <h2 className="text-4xl font-bold text-surface-900 mb-6">We Integrate Everything You Already Use</h2>
-            <p className="text-xl text-surface-600 mb-4">We don't reinvent your stack — we make it better.</p>
+            <h2 className="text-4xl font-bold text-surface-900 mb-6">Enterprise Integrations for Global Success</h2>
+            <p className="text-xl text-surface-600 mb-4">From startup to IPO — we connect everything you need.</p>
             <p className="text-lg text-surface-600 text-pretty">
-              Low-code platforms often struggle with custom workflows and integrations. We bridge the gap between your app and critical systems — from CRMs to analytics, payments, auth, or internal tools.
+              No-code platforms get you started, but global businesses need enterprise integrations. We connect your platform to payment processors, CRMs, analytics, AI services, and infrastructure that Fortune 500 companies rely on.
             </p>
           </div>
           
@@ -207,12 +206,12 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-r from-brand-600 to-brand-700 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h2 className="text-4xl font-bold mb-6">From Bubble to Backend in 30 Days</h2>
+            <h2 className="text-4xl font-bold mb-6">From No-Code MVP to $10M Series A</h2>
             <p className="text-lg mb-8 opacity-90 text-pretty">
-              A fintech startup came to us with a Bubble MVP that was breaking under user load. Within 30 days, we migrated their core features to React + Firebase, implemented Stripe Connect, and deployed CI/CD with zero downtime.
+              A fintech startup came to us with a Bubble prototype handling 100 users. Within 6 months, we transformed it into a React + Firebase platform serving 50,000+ users across 15 countries. They closed their Series A three months later.
             </p>
             <blockquote className="text-2xl font-medium italic mb-4">
-              "They helped us go from hacky prototype to real product in a month. We landed our first enterprise pilot right after."
+              "They didn't just migrate our code — they gave us the infrastructure to become a global business. Our investors were blown away by our technical foundation."
             </blockquote>
             <div className="flex items-center justify-center space-x-2">
               {[...Array(5)].map((_, i) => (
@@ -228,9 +227,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12 animate-fade-up">
-              <h2 className="text-4xl font-bold text-surface-900 mb-6">Let's Upgrade Your App</h2>
+              <h2 className="text-4xl font-bold text-surface-900 mb-6">Ready to Scale Your Vision Globally?</h2>
               <p className="text-lg text-surface-600">
-                Get a free code analysis today — or book a consult call to talk architecture, migration strategy, and cost estimates.
+                Get a free code analysis today and discover how to transform your no-code MVP into enterprise-grade infrastructure that scales worldwide.
               </p>
             </div>
             
@@ -293,9 +292,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">MVP → Enterprise</h3>
+              <h3 className="text-2xl font-bold mb-4">No-Code → Global Scale</h3>
               <p className="text-surface-300 text-sm">
-                We turn your no-code MVP into real infrastructure — fast, secure, and scalable.
+                We transform no-code MVPs into global businesses — fast, secure, and built to scale worldwide.
               </p>
             </div>
             <div>
@@ -329,7 +328,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-surface-800 pt-8 text-center text-sm text-surface-400">
-            <p>&copy; 2024 MVP to Enterprise. All rights reserved.</p>
+            <p>&copy; 2024 No-Code to Global Scale. All rights reserved.</p>
           </div>
         </div>
       </footer>
