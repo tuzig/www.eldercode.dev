@@ -22,7 +22,8 @@ import {
   Terminal,
   Database,
   Lock,
-  Cpu
+  Cpu,
+  Phone
 } from "lucide-react";
 
 const Index = () => {
@@ -39,7 +40,7 @@ const Index = () => {
     console.log("Form submitted:", formData);
     toast({
       title: "AI Code Audit Submitted!",
-      description: "Security risks. Scaling gaps. DevOps blindspots. Delivered in 24h.",
+      description: "Performance issues. Security risks. Scaling blockers. Delivered in 24h.",
     });
     setFormData({ name: "", email: "", platform: "", description: "" });
   };
@@ -49,56 +50,56 @@ const Index = () => {
   };
 
   const affirmations = [
-    "You built it fast. We'll make it last.",
+    "AI accelerates. Architecture secures.",
     "From Lovable to unstoppable.", 
-    "AI isn't here to replace you. It's here to scale you.",
-    "Your Glide app was a spark. Now let's light the fire.",
-    "The MVP was proof. This is product-market domination."
+    "We've scaled products that scaled companies.",
+    "The shortcut is experience.",
+    "Move fast. Don't break production."
   ];
 
   const services = [
     {
       icon: Brain,
-      title: "AI-Powered Code Migration",
-      description: "From visual logic to maintainable codebases in React, Node, Supabase."
+      title: "AI-Powered Migration",
+      description: "From Bubble/Glide to clean, modular codebases (Next.js, Supabase, Firebase)"
     },
     {
       icon: Zap,
-      title: "Infra & Deployment Pipelines",
-      description: "GitHub Actions, Vercel, Amplify. Scalable by default."
+      title: "Infra & CI/CD Setup",
+      description: "GitHub Actions, Vercel/Firebase deploys, rollback safety, preview branches"
     },
     {
       icon: Shield,
-      title: "Security + Compliance",
-      description: "We audit and harden for OWASP, SOC2, GDPR."
+      title: "Security & Compliance",
+      description: "SOC2 readiness, GDPR, secrets management, OWASP audit & remediation"
     },
     {
       icon: BarChart3,
-      title: "Performance Re-Architecture",
-      description: "Optimize APIs, databases, and async tasks."
+      title: "Observability + Logs",
+      description: "PostHog / Amplitude / Sentry / DB tracing baked in from day 1"
     },
     {
       icon: Code2,
-      title: "AI-Enhanced UX/Logic",
-      description: "Add OpenAI or LangChain into core workflows."
+      title: "AI Integration",
+      description: "Embed OpenAI, LangChain, or custom models into your workflow or product logic"
     }
   ];
 
   const lowCodePlatforms = [
-    "Lovable", "Cursor", "Base44", "Bubble", "Webflow", "Glide", "Adalo", "Softr", "Thunkable", "Bravo"
+    "Lovable", "Cursor", "Base44", "Bubble", "Glide", "Adalo", "Webflow", "Softr"
   ];
 
   const techStack = [
-    "React", "Next.js", "Supabase", "Firebase", "Vercel", "AWS", 
-    "Stripe", "Clerk", "Segment", "LangChain", "OpenAI"
+    "Next.js", "React", "Supabase", "Firebase", "AWS", "Vercel", 
+    "Clerk", "Stripe", "Segment", "OpenAI"
   ];
 
   const auditChecklist = [
-    "Security risks",
-    "Scaling gaps", 
-    "DevOps blindspots",
-    "AI integration opportunities",
-    "Migration pathway analysis"
+    "Performance issues",
+    "Security risks", 
+    "Scaling blockers",
+    "Migration plan",
+    "Stack recommendation"
   ];
 
   return (
@@ -122,8 +123,8 @@ const Index = () => {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Services</a>
-              <a href="#platforms" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Platforms</a>
-              <a href="#contact" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Contact</a>
+              <a href="#platforms" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Stack</a>
+              <a href="#contact" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">About</a>
               <Button 
                 size="sm" 
                 className="bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide glow-cyan"
@@ -141,15 +142,15 @@ const Index = () => {
           <div className="max-w-5xl mx-auto text-center animate-fade-up">
             <div className="inline-flex items-center bg-dark-surface border border-dark-border rounded-full px-4 py-2 text-sm text-cyan mb-8 animate-pulse-glow">
               <Rocket className="h-4 w-4 mr-2" />
-              <span className="font-mono uppercase tracking-wider">Welcome to the AI Infrastructure Era</span>
+              <span className="font-mono uppercase tracking-wider">You Built Fast. Now Scale With Experience.</span>
             </div>
             
             <h1 className="text-6xl md:text-8xl font-display font-bold mb-6 text-balance">
-              From No-Code to <span className="text-gradient-cyan animate-glitch">Global-Scale</span>
+              You Built It <span className="text-gradient-cyan animate-glitch">Fast</span>. Now Make It <span className="text-gradient-purple">Unstoppable</span>.
             </h1>
             
             <p className="text-xl md:text-2xl text-dark-text-secondary mb-8 max-w-4xl mx-auto text-pretty font-light leading-relaxed">
-              You shipped an MVP in days. Now you're facing real traffic, real users, and real limits. We help you rebuild with AI-native infrastructure — fast, modular, and production-grade.
+              Our team of senior software engineers, architects, and AI-native systems experts transform no-code apps into real infrastructure — fast, secure, and scalable.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -161,30 +162,15 @@ const Index = () => {
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Button>
               
-              <div className="text-center">
-                <p className="text-sm text-dark-text-muted font-mono uppercase tracking-wider">
-                  Security risks. Scaling gaps. DevOps blindspots.
-                </p>
-                <p className="text-xs text-cyan font-mono">
-                  Delivered in 24h.
-                </p>
-              </div>
+              <Button 
+                variant="outline"
+                size="lg" 
+                className="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
+              >
+                <Phone className="mr-3 h-5 w-5" />
+                TALK TO A LEAD ARCHITECT
+              </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Revolution Section */}
-      <section className="py-20 bg-gradient-to-r from-dark-surface via-dark-bg to-dark-surface border-y border-dark-border">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl font-display font-bold mb-6 text-gradient-purple">The Revolution Is Here</h2>
-            <p className="text-2xl mb-8 font-medium text-cyan font-mono uppercase tracking-wide">
-              This isn't dev services. This is an evolution pipeline.
-            </p>
-            <blockquote className="text-3xl italic opacity-90 text-pretty font-light">
-              "We don't just replace your MVP — we upgrade your entire product genome. From UX-preserving rebuilds to CI/CD, observability, and AI-augmented workflows."
-            </blockquote>
           </div>
         </div>
       </section>
@@ -211,9 +197,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
             <h2 className="text-5xl font-display font-bold mb-6">What We Actually Do</h2>
+            <div className="bg-dark-surface py-8 px-6 rounded-lg border border-dark-border mb-8">
+              <p className="text-lg text-dark-text-secondary mb-4">
+                This isn't freelance. This is engineering.
+              </p>
+              <p className="text-base text-dark-text-secondary">
+                Every project is led by senior developers and infrastructure architects — people who've scaled real platforms, rebuilt fragile MVPs, and deployed software that holds under pressure. We use AI tools, yes — but they don't replace experience. They multiply it.
+              </p>
+            </div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <Card 
                 key={index} 
@@ -228,12 +222,6 @@ const Index = () => {
               </Card>
             ))}
           </div>
-
-          <div className="text-center bg-dark-surface py-8 px-6 rounded-lg border border-dark-border">
-            <p className="text-2xl font-medium italic text-gradient-purple font-display">
-              "You don't need a full rewrite — just the right evolution."
-            </p>
-          </div>
         </div>
       </section>
 
@@ -241,76 +229,68 @@ const Index = () => {
       <section id="platforms" className="py-20 bg-dark-surface border-y border-dark-border">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center mb-16 animate-fade-up">
-            <h2 className="text-5xl font-display font-bold mb-6">Low-Code Platforms We Support</h2>
-            <p className="text-2xl mb-8 font-medium text-cyan font-mono uppercase tracking-wide">
-              We know your tools. We speak your logic.
-            </p>
-            <p className="text-lg text-dark-text-secondary">
-              We specialize in exporting and evolving logic, data, and UI flows from modern low-code and generative platforms:
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto mb-12">
-            {/* Platforms We Migrate From */}
-            <Card className="bg-dark-bg border-dark-border hover:border-purple/50 transition-colors">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-display font-bold mb-6 text-gradient-purple">
-                  ⬅️ Platforms We Liberate You From:
-                </h3>
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  {lowCodePlatforms.map((platform, index) => (
-                    <div 
-                      key={index} 
-                      className={`rounded-lg p-3 text-center text-sm font-mono uppercase tracking-wider transition-all hover:scale-105 ${
-                        ['Lovable', 'Cursor', 'Base44'].includes(platform) 
-                          ? 'bg-gradient-to-r from-cyan/20 to-purple/20 border border-cyan/30 text-cyan glow-cyan' 
-                          : 'bg-dark-surface border border-dark-border text-dark-text-secondary hover:text-cyan hover:border-cyan/30'
-                      }`}
-                    >
-                      {platform}
-                    </div>
-                  ))}
+            <h2 className="text-5xl font-display font-bold mb-6">Low-Code We Know Inside-Out</h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {lowCodePlatforms.map((platform, index) => (
+                <div 
+                  key={index} 
+                  className={`rounded-lg p-4 text-center text-lg font-mono uppercase tracking-wider transition-all hover:scale-105 ${
+                    ['Lovable', 'Cursor', 'Base44'].includes(platform) 
+                      ? 'bg-gradient-to-r from-cyan/20 to-purple/20 border border-cyan/30 text-cyan glow-cyan' 
+                      : 'bg-dark-bg border border-dark-border text-dark-text-secondary hover:text-cyan hover:border-cyan/30'
+                  }`}
+                >
+                  ✅ {platform}
+                  {platform === 'Lovable' && <span className="block text-xs mt-1 opacity-80">app exports, logic parsing, AI build-to-code mapping</span>}
+                  {platform === 'Cursor' && <span className="block text-xs mt-1 opacity-80">prompt chains, AI logic workflows, VS Code-based apps</span>}
+                  {platform === 'Base44' && <span className="block text-xs mt-1 opacity-80">migration to Firebase/Vercel with clean backend-first structure</span>}
+                  {['Bubble', 'Glide', 'Adalo', 'Webflow', 'Softr'].includes(platform) && <span className="block text-xs mt-1 opacity-80">100+ apps evolved</span>}
                 </div>
-                <p className="text-sm text-dark-text-muted font-mono">
-                  → We extract workflows, data, and backend logic — and convert to production-grade systems.
-                </p>
-              </CardContent>
-            </Card>
+              ))}
+            </div>
 
-            {/* Tech We Deploy To */}
-            <Card className="bg-dark-bg border-dark-border hover:border-cyan/50 transition-colors">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-display font-bold mb-6 text-gradient-cyan">
-                  ➡️ Tech We Rebuild You Onto:
-                </h3>
-                <div className="grid grid-cols-1 gap-2 mb-6">
-                  {techStack.map((tech, index) => (
-                    <div 
-                      key={index} 
-                      className="bg-gradient-to-r from-cyan/10 to-purple/10 border border-cyan/20 rounded-lg p-3 text-sm font-mono text-cyan hover:border-cyan/50 transition-colors"
-                    >
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-dark-text-muted font-mono">
-                  → You get infra built like a startup from 2025. Not a prototype from 2022.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="text-center bg-gradient-to-r from-cyan/10 to-purple/10 py-8 px-6 rounded-lg border border-cyan/20">
+              <p className="text-lg font-medium italic mb-4 text-gradient-cyan font-display">
+                "If you built on it, we've probably rebuilt from it. Our AI tooling can read your logic. Our engineers turn it into code your next team will thank you for."
+              </p>
+            </div>
           </div>
 
-          <div className="text-center bg-gradient-to-r from-cyan/10 to-purple/10 py-8 px-6 rounded-lg border border-cyan/20">
-            <p className="text-lg font-medium italic mb-4 text-gradient-cyan font-display">
-              "If you started on a modern low-code builder — we've probably already migrated from it. We don't judge your tools. We upgrade your outcomes."
-            </p>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
-            >
-              → MIGRATE MY APP →
-            </Button>
+          {/* Infra We Deploy Onto */}
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* From */}
+              <Card className="bg-dark-bg border-dark-border hover:border-purple/50 transition-colors">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-display font-bold mb-6 text-gradient-purple">
+                    From:
+                  </h3>
+                  <div className="text-lg font-mono text-dark-text-secondary">
+                    Bubble, Glide, Cursor, Base44, Lovable
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* To */}
+              <Card className="bg-dark-bg border-dark-border hover:border-cyan/50 transition-colors">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-display font-bold mb-6 text-gradient-cyan">
+                    To:
+                  </h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {techStack.map((tech, index) => (
+                      <div 
+                        key={index} 
+                        className="bg-gradient-to-r from-cyan/10 to-purple/10 border border-cyan/20 rounded-lg p-2 text-sm font-mono text-cyan hover:border-cyan/50 transition-colors"
+                      >
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -322,36 +302,70 @@ const Index = () => {
             <Card className="bg-gradient-to-r from-dark-surface via-dark-bg to-dark-surface border border-cyan/20 animate-scale-up glow-cyan">
               <CardContent className="p-12 text-center">
                 <h2 className="text-4xl font-display font-bold mb-6 text-gradient-cyan">
-                  From Bubble MVP to $1.5M ARR in 90 Days
+                  From Bubble MVP → 7-Figure ARR → Zero Downtime Migration
                 </h2>
                 <p className="text-lg mb-8 text-dark-text-secondary text-pretty">
-                  A global B2B startup came to us with a Bubble MVP. We transitioned it into a React + Supabase system with full auth, billing, email infrastructure, and metrics observability. They closed their first Fortune 100 client within 60 days of launch.
+                  They came to us with traction but crashes. We rebuilt in 30 days on a clean Supabase stack, plugged in Stripe Connect, and shipped an async-notification engine. Zero downtime. First enterprise deal signed 2 weeks later.
                 </p>
-                <blockquote className="text-2xl font-medium italic mb-4 text-gradient-purple font-display">
-                  "We thought we were just validating. Turns out we were building a real business — and these guys made it happen."
-                </blockquote>
+                <div className="bg-dark-bg border border-dark-border rounded-lg p-6 font-mono">
+                  <Terminal className="h-6 w-6 text-cyan mb-2 mx-auto" />
+                  <blockquote className="text-xl font-medium text-gradient-purple">
+                    'They made us look like we had an engineering team of 20. We had 2.'
+                  </blockquote>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Lead Magnet Section */}
+      {/* Why We're Doing This Section */}
       <section className="py-20 bg-dark-surface border-y border-dark-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-5xl font-display font-bold mb-12">Why We're Doing This</h2>
+            
+            <div className="text-left bg-dark-bg p-8 rounded-lg border border-dark-border mb-8">
+              <p className="text-lg mb-4 text-dark-text-secondary">
+                Because we love this sh*t.
+              </p>
+              <p className="text-base mb-4 text-dark-text-secondary">
+                Benny's been coding since 1982 — back when floppy disks were high-tech and you had to earn every line of RAM. He sold a software company to HP in 2007. He's still shipping code daily.
+              </p>
+              <p className="text-base mb-4 text-dark-text-secondary">
+                We've built through waterfall, agile, microservices, and now the age of AI. This is the most exciting era of software ever — and we're here to shape it.
+              </p>
+              <p className="text-base mb-4 text-dark-text-secondary">
+                We believe in founders. We believe in fast. But we <em>know</em> that what wins is clean architecture, human-led strategy, and production-level discipline.
+              </p>
+              <p className="text-base text-dark-text-secondary">
+                This isn't just work. This is craft. And AI's just the newest brush we've mastered.
+              </p>
+            </div>
+
+            <blockquote className="text-3xl italic text-gradient-purple font-display">
+              "We're not here to refactor your app. We're here to scale your company."
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Magnet Section */}
+      <section className="py-20 bg-dark-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center mb-12 animate-fade-up">
             <h2 className="text-5xl font-display font-bold mb-6">
-              🚨 <span className="text-gradient-purple">AI Code Audit</span>
+              🚨 <span className="text-gradient-purple">AI-Powered Code & Risk Audit</span> — Free, in 24h
             </h2>
             <p className="text-xl text-dark-text-secondary mb-8">
-              Upload your app export or give us read access — we'll return a free 24h report covering:
+              Upload your no-code app or link your repo. We'll return a real architectural breakdown:
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {auditChecklist.map((item, index) => (
                 <div 
                   key={index} 
-                  className="flex items-center space-x-3 bg-dark-bg p-4 rounded-lg border border-dark-border hover:border-cyan/30 transition-colors"
+                  className="flex items-center space-x-3 bg-dark-surface p-4 rounded-lg border border-dark-border hover:border-cyan/30 transition-colors"
                 >
                   <CheckCircle2 className="h-5 w-5 text-cyan flex-shrink-0" />
                   <span className="font-medium font-mono text-sm uppercase tracking-wide">{item}</span>
@@ -359,19 +373,29 @@ const Index = () => {
               ))}
             </div>
             
-            <Button 
-              size="lg" 
-              className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
-            >
-              🔥 RUN FREE AI CODE AUDIT
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button 
+                size="lg" 
+                className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
+              >
+                🔥 RUN MY AUDIT
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+              </Button>
+              
+              <Button 
+                variant="outline"
+                size="lg" 
+                className="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
+              >
+                👨‍💻 BOOK STRATEGY CALL
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-dark-bg">
+      <section id="contact" className="py-20 bg-dark-surface border-t border-dark-border">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12 animate-fade-up">
@@ -381,7 +405,7 @@ const Index = () => {
               </p>
             </div>
             
-            <Card className="bg-dark-surface border-dark-border animate-scale-up hover:glow-cyan transition-all duration-300">
+            <Card className="bg-dark-bg border-dark-border animate-scale-up hover:glow-cyan transition-all duration-300">
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -391,7 +415,7 @@ const Index = () => {
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         placeholder="Your name"
-                        className="bg-dark-bg border-dark-border text-dark-text-primary focus:border-cyan"
+                        className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
                         required
                       />
                     </div>
@@ -402,7 +426,7 @@ const Index = () => {
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         placeholder="your@email.com"
-                        className="bg-dark-bg border-dark-border text-dark-text-primary focus:border-cyan"
+                        className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
                         required
                       />
                     </div>
@@ -413,7 +437,7 @@ const Index = () => {
                       value={formData.platform}
                       onChange={(e) => handleInputChange("platform", e.target.value)}
                       placeholder="e.g., Lovable, Cursor, Bubble, Webflow"
-                      className="bg-dark-bg border-dark-border text-dark-text-primary focus:border-cyan"
+                      className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
                       required
                     />
                   </div>
@@ -424,7 +448,7 @@ const Index = () => {
                       onChange={(e) => handleInputChange("description", e.target.value)}
                       placeholder="Tell us about your app, current challenges, and what you're hoping to achieve..."
                       rows={4}
-                      className="bg-dark-bg border-dark-border text-dark-text-primary focus:border-cyan resize-none"
+                      className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan resize-none"
                       required
                     />
                   </div>
@@ -444,7 +468,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark-surface border-t border-dark-border py-16">
+      <footer className="bg-dark-bg border-t border-dark-border py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
@@ -453,22 +477,22 @@ const Index = () => {
                 Built fast. Rebuilt right. Scaled forever.
               </p>
               <p className="text-dark-text-muted text-xs">
-                We transform no-code MVPs into AI-native business infrastructure.
+                We transform no-code MVPs into production-grade infrastructure with senior engineering expertise.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#services" className="text-dark-text-secondary hover:text-cyan transition-colors">Services</a></li>
-                <li><a href="#platforms" className="text-dark-text-secondary hover:text-cyan transition-colors">Platforms</a></li>
-                <li><a href="#contact" className="text-dark-text-secondary hover:text-cyan transition-colors">Case Studies</a></li>
+                <li><a href="#platforms" className="text-dark-text-secondary hover:text-cyan transition-colors">Stack</a></li>
+                <li><a href="#contact" className="text-dark-text-secondary hover:text-cyan transition-colors">About</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-dark-text-secondary hover:text-cyan transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-dark-text-secondary hover:text-cyan transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="text-dark-text-secondary hover:text-cyan transition-colors">Privacy</a></li>
+                <li><a href="#" className="text-dark-text-secondary hover:text-cyan transition-colors">Terms</a></li>
               </ul>
             </div>
             <div>
