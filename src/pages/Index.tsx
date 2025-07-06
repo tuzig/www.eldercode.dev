@@ -26,7 +26,8 @@ import {
   Microscope,
   TestTube,
   FileCheck,
-  ExternalLink
+  ChevronDown,
+  ChevronUp
 } from "lucide-react";
 
 const Index = () => {
@@ -37,6 +38,7 @@ const Index = () => {
     platform: "",
     description: ""
   });
+  const [showUserJourneyHelp, setShowUserJourneyHelp] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -420,15 +422,24 @@ const Index = () => {
                   <div>
                     <label className="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Brief App Description</label>
                     <div className="mb-2">
-                      <a 
-                        href="https://blog.hubspot.com/service/what-is-user-journey-mapping" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                      <button 
+                        type="button"
+                        onClick={() => setShowUserJourneyHelp(!showUserJourneyHelp)}
                         className="inline-flex items-center text-xs text-cyan hover:text-cyan-400 transition-colors"
                       >
                         What are user journeys? 
-                        <ExternalLink className="h-3 w-3 ml-1" />
-                      </a>
+                        {showUserJourneyHelp ? (
+                          <ChevronUp className="h-3 w-3 ml-1" />
+                        ) : (
+                          <ChevronDown className="h-3 w-3 ml-1" />
+                        )}
+                      </button>
+                      {showUserJourneyHelp && (
+                        <div className="mt-2 p-3 bg-dark-surface border border-dark-border rounded-lg text-xs text-dark-text-secondary">
+                          <p className="mb-2"><strong className="text-cyan">Personas:</strong> Who are your users? (e.g., "busy professionals", "small business owners", "students")</p>
+                          <p><strong className="text-cyan">User Journeys:</strong> What steps do they take in your app? (e.g., "sign up → create profile → book appointment → pay → receive confirmation")</p>
+                        </div>
+                      )}
                     </div>
                     <Textarea
                       value={formData.description}
