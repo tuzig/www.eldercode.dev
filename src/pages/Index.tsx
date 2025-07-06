@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -309,7 +310,7 @@ const Index = () => {
                 Back in the last millennium, Benny developed a software testing tool called "The Cloud" and built a company around it, which was later sold. A testing tools company that helped teams ship reliable code faster. He's still shipping code daily, still obsessed with quality.
               </p>
               <p className="text-base mb-4 text-dark-text-secondary">
-                We've worked on mainframe VMS, Unix, Mac, Windows, Docker, cloud platforms, and now AI. We've built through waterfall, agile, microservices, and now the age of AI. This is the most exciting era of software ever — and we're here to shape it.
+                We've worked on mainframe VMS, Unix, Mac, Windows, Docker, cloud platforms, and now AI. This is the most exciting era of software ever — and we're here to shape it.
               </p>
               <p className="text-base mb-4 text-dark-text-secondary">
                 We believe in founders. We believe in fast. But we <em>know</em> that what wins is clean architecture, human-led strategy, and production-level discipline.
