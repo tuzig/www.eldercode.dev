@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -264,38 +263,6 @@ const Index = () => {
 
           {/* Infra We Deploy Onto */}
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* From */}
-              <Card className="bg-dark-bg border-dark-border hover:border-purple/50 transition-colors">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-display font-bold mb-6 text-gradient-purple">
-                    From:
-                  </h3>
-                  <div className="text-lg font-mono text-dark-text-secondary">
-                    Bubble, Glide, Cursor, Base44, Lovable
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* To */}
-              <Card className="bg-dark-bg border-dark-border hover:border-cyan/50 transition-colors">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-display font-bold mb-6 text-gradient-cyan">
-                    To:
-                  </h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    {techStack.map((tech, index) => (
-                      <div 
-                        key={index} 
-                        className="bg-gradient-to-r from-cyan/10 to-purple/10 border border-cyan/20 rounded-lg p-2 text-sm font-mono text-cyan hover:border-cyan/50 transition-colors"
-                      >
-                        {tech}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
