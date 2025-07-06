@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +22,8 @@ import {
   Database,
   Lock,
   Cpu,
-  Phone
+  Phone,
+  Microscope
 } from "lucide-react";
 
 const Index = () => {
@@ -129,7 +129,8 @@ const Index = () => {
                 size="sm" 
                 className="bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide glow-cyan"
               >
-                🔥 AI AUDIT
+                <Microscope className="h-4 w-4 mr-2" />
+                AI AUDIT
               </Button>
             </div>
           </nav>
@@ -158,7 +159,8 @@ const Index = () => {
                 size="lg" 
                 className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
               >
-                🔥 RUN FREE AI CODE AUDIT
+                <Microscope className="h-6 w-6 mr-3" />
+                RUN FREE AI CODE AUDIT
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Button>
               
@@ -355,8 +357,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center mb-12 animate-fade-up">
             <h2 className="text-5xl font-display font-bold mb-6">
-              🚨 <span className="text-gradient-purple">AI-Powered Code & Risk Audit</span> — Free, in 24h
+              <Microscope className="inline-block h-12 w-12 mr-4 text-purple" />
+              <span className="text-gradient-purple">AI-Powered Code & Risk Audit</span> — Free, in 24h
             </h2>
+            
             <p className="text-xl text-dark-text-secondary mb-8">
               Upload your no-code app or link your repo. We'll return a real architectural breakdown:
             </p>
@@ -378,7 +382,8 @@ const Index = () => {
                 size="lg" 
                 className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
               >
-                🔥 RUN MY AUDIT
+                <Microscope className="h-6 w-6 mr-3" />
+                RUN MY AUDIT
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Button>
               
@@ -522,7 +527,8 @@ const Index = () => {
           className="bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow shadow-2xl"
           size="lg"
         >
-          🔥 FREE AUDIT
+          <Microscope className="h-5 w-5 mr-2" />
+          FREE AUDIT
         </Button>
       </div>
     </div>
