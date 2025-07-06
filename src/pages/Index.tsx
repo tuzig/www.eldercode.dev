@@ -170,7 +170,7 @@ const Index = () => {
                 className="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
               >
                 <Phone className="mr-3 h-5 w-5" />
-                TALK TO A LEAD ARCHITECT
+                SCHEDULE STRATEGY CALL
               </Button>
             </div>
           </div>
@@ -392,7 +392,7 @@ const Index = () => {
                 size="lg" 
                 className="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
               >
-                👨‍💻 BOOK STRATEGY CALL
+                👨‍💻 SCHEDULE STRATEGY CALL
               </Button>
             </div>
           </div>
