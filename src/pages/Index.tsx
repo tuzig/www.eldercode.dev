@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -40,7 +39,7 @@ const Index = () => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     toast({
-      title: "AI Code Audit Submitted!",
+      title: "Analysis Request Submitted!",
       description: "Performance issues. Security risks. Scaling blockers. Delivered in 24h.",
     });
     setFormData({ name: "", email: "", platform: "", description: "" });
@@ -131,7 +130,7 @@ const Index = () => {
                 className="bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide glow-cyan"
               >
                 <Microscope className="h-4 w-4 mr-2" />
-                AI AUDIT
+                REQUEST ANALYSIS
               </Button>
             </div>
           </nav>
@@ -161,7 +160,7 @@ const Index = () => {
                 className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
               >
                 <Microscope className="h-6 w-6 mr-3" />
-                RUN FREE AI CODE AUDIT
+                REQUEST ANALYSIS & QUOTE
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Button>
               
@@ -384,7 +383,7 @@ const Index = () => {
                 className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
               >
                 <Microscope className="h-6 w-6 mr-3" />
-                RUN MY AUDIT
+                REQUEST ANALYSIS & QUOTE
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Button>
               
@@ -529,7 +528,7 @@ const Index = () => {
           size="lg"
         >
           <Microscope className="h-5 w-5 mr-2" />
-          FREE AUDIT
+          REQUEST QUOTE
         </Button>
       </div>
     </div>
