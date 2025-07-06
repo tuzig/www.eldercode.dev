@@ -508,17 +508,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      {/* Sticky CTA */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <Button 
-          className="bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow shadow-2xl"
-          size="lg"
-        >
-          <Microscope className="h-5 w-5 mr-2" />
-          REQUEST QUOTE
-        </Button>
-      </div>
     </div>
   );
 };
