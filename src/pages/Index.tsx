@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,9 +25,7 @@ import {
   Phone,
   Microscope,
   TestTube,
-  FileCheck,
-  ChevronDown,
-  ChevronUp
+  FileCheck
 } from "lucide-react";
 
 const Index = () => {
@@ -37,9 +34,9 @@ const Index = () => {
     name: "",
     email: "",
     platform: "",
-    description: ""
+    personas: "",
+    userJourneys: ""
   });
-  const [showUserJourneyHelp, setShowUserJourneyHelp] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +45,7 @@ const Index = () => {
       title: "Analysis Request Submitted!",
       description: "Performance issues. Security risks. Scaling blockers. Delivered in 24h.",
     });
-    setFormData({ name: "", email: "", platform: "", description: "" });
+    setFormData({ name: "", email: "", platform: "", personas: "", userJourneys: "" });
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -421,31 +418,29 @@ const Index = () => {
                     />
                   </div>
                   <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <label className="text-sm font-mono font-medium text-cyan uppercase tracking-wide">Brief App Description</label>
-                      <button 
-                        type="button"
-                        onClick={() => setShowUserJourneyHelp(!showUserJourneyHelp)}
-                        className="text-cyan hover:text-cyan-400 transition-colors"
-                      >
-                        {showUserJourneyHelp ? (
-                          <ChevronUp className="h-4 w-4" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4" />
-                        )}
-                      </button>
+                    <label className="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Personas</label>
+                    <div className="mb-3 p-3 bg-dark-surface border border-dark-border rounded-lg text-xs text-dark-text-secondary">
+                      <p><strong className="text-cyan">Who are your users?</strong> (e.g., "busy professionals", "small business owners", "students")</p>
                     </div>
-                    {showUserJourneyHelp && (
-                      <div className="mb-3 p-3 bg-dark-surface border border-dark-border rounded-lg text-xs text-dark-text-secondary">
-                        <p className="mb-2"><strong className="text-cyan">Personas:</strong> Who are your users? (e.g., "busy professionals", "small business owners", "students")</p>
-                        <p><strong className="text-cyan">User Journeys:</strong> What steps do they take in your app? (e.g., "sign up → create profile → book appointment → pay → receive confirmation")</p>
-                      </div>
-                    )}
                     <Textarea
-                      value={formData.description}
-                      onChange={(e) => handleInputChange("description", e.target.value)}
-                      placeholder="Tell us about your app, users and their journeys"
-                      rows={4}
+                      value={formData.personas}
+                      onChange={(e) => handleInputChange("personas", e.target.value)}
+                      placeholder="Describe your target users"
+                      rows={3}
+                      className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan resize-none"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">User Journeys</label>
+                    <div className="mb-3 p-3 bg-dark-surface border border-dark-border rounded-lg text-xs text-dark-text-secondary">
+                      <p><strong className="text-cyan">What steps do they take in your app?</strong> (e.g., "sign up → create profile → book appointment → pay → receive confirmation")</p>
+                    </div>
+                    <Textarea
+                      value={formData.userJourneys}
+                      onChange={(e) => handleInputChange("userJourneys", e.target.value)}
+                      placeholder="Describe the key workflows in your app"
+                      rows={3}
                       className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan resize-none"
                       required
                     />
