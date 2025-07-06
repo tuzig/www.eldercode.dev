@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -151,7 +152,7 @@ const Index = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-dark-text-secondary mb-8 max-w-4xl mx-auto text-pretty font-light leading-relaxed">
-              Our team of senior software engineers, architects, and AI-native systems experts transform no-code apps into real infrastructure — fast, secure, and scalable.
+              Our team of senior software engineers, architects, and DevOps experts transform no-code apps into real infrastructure — fast, secure, and scalable.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
