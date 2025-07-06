@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -303,7 +304,10 @@ const Index = () => {
                 Because we love this sh*t.
               </p>
               <p className="text-base mb-4 text-dark-text-secondary">
-                Benny's been coding since 1982 — back when floppy disks were high-tech and you had to earn every line of RAM. He sold a software company to HP in 2007. He's still shipping code daily.
+                Benny's been coding since 1982 — back when you soldered cables to transfer files between Unix stations and every byte of memory had to be earned. He's lived through the evolution from those early computing days to helping startups scale up with proper testing infrastructure.
+              </p>
+              <p className="text-base mb-4 text-dark-text-secondary">
+                The software company he sold to HP in 2007? A testing tools company that helped teams ship reliable code faster. He's still shipping code daily, still obsessed with quality.
               </p>
               <p className="text-base mb-4 text-dark-text-secondary">
                 We've built through waterfall, agile, microservices, and now the age of AI. This is the most exciting era of software ever — and we're here to shape it.
