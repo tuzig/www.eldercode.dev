@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -420,27 +421,26 @@ const Index = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Brief App Description</label>
-                    <div className="mb-2">
+                    <div className="flex items-center justify-between mb-2">
+                      <label className="text-sm font-mono font-medium text-cyan uppercase tracking-wide">Brief App Description</label>
                       <button 
                         type="button"
                         onClick={() => setShowUserJourneyHelp(!showUserJourneyHelp)}
-                        className="inline-flex items-center text-xs text-cyan hover:text-cyan-400 transition-colors"
+                        className="text-cyan hover:text-cyan-400 transition-colors"
                       >
-                        What are user journeys? 
                         {showUserJourneyHelp ? (
-                          <ChevronUp className="h-3 w-3 ml-1" />
+                          <ChevronUp className="h-4 w-4" />
                         ) : (
-                          <ChevronDown className="h-3 w-3 ml-1" />
+                          <ChevronDown className="h-4 w-4" />
                         )}
                       </button>
-                      {showUserJourneyHelp && (
-                        <div className="mt-2 p-3 bg-dark-surface border border-dark-border rounded-lg text-xs text-dark-text-secondary">
-                          <p className="mb-2"><strong className="text-cyan">Personas:</strong> Who are your users? (e.g., "busy professionals", "small business owners", "students")</p>
-                          <p><strong className="text-cyan">User Journeys:</strong> What steps do they take in your app? (e.g., "sign up → create profile → book appointment → pay → receive confirmation")</p>
-                        </div>
-                      )}
                     </div>
+                    {showUserJourneyHelp && (
+                      <div className="mb-3 p-3 bg-dark-surface border border-dark-border rounded-lg text-xs text-dark-text-secondary">
+                        <p className="mb-2"><strong className="text-cyan">Personas:</strong> Who are your users? (e.g., "busy professionals", "small business owners", "students")</p>
+                        <p><strong className="text-cyan">User Journeys:</strong> What steps do they take in your app? (e.g., "sign up → create profile → book appointment → pay → receive confirmation")</p>
+                      </div>
+                    )}
                     <Textarea
                       value={formData.description}
                       onChange={(e) => handleInputChange("description", e.target.value)}
