@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +24,9 @@ import {
   Lock,
   Cpu,
   Phone,
-  Microscope
+  Microscope,
+  TestTube,
+  FileCheck
 } from "lucide-react";
 
 const Index = () => {
@@ -59,29 +62,29 @@ const Index = () => {
 
   const services = [
     {
-      icon: Brain,
-      title: "AI-Powered Migration",
-      description: "From Bubble/Glide to clean, modular codebases (Next.js, Supabase, Firebase)"
+      icon: Code2,
+      title: "Code Cleanup & Refactoring",
+      description: "Remove unneeded packages and imports, eliminate inline CSS, break down long functions, and improve overall code readability for maintainable production systems"
     },
     {
-      icon: Zap,
-      title: "Infra & CI/CD Setup",
-      description: "GitHub Actions, Vercel/Firebase deploys, rollback safety, preview branches"
+      icon: Cloud,
+      title: "DevOps Setup & Scaling",
+      description: "Production-ready hosting that scales on Google Cloud, complete CI/CD pipelines, automated deployments, and infrastructure that grows with your business"
+    },
+    {
+      icon: TestTube,
+      title: "Comprehensive Testing Suite",
+      description: "Unit tests for backend functionality, end-to-end adaptive testing for user workflows, automated test coverage, and quality assurance protocols"
     },
     {
       icon: Shield,
-      title: "Security & Compliance",
-      description: "SOC2 readiness, GDPR, secrets management, OWASP audit & remediation"
+      title: "GDPR Compliance & Security",
+      description: "Full GDPR compliance implementation, data protection protocols, privacy policy integration, cookie management, and regulatory compliance audit"
     },
     {
-      icon: BarChart3,
-      title: "Observability + Logs",
-      description: "PostHog / Amplitude / Sentry / DB tracing baked in from day 1"
-    },
-    {
-      icon: Code2,
-      title: "AI Integration",
-      description: "Embed OpenAI, LangChain, or custom models into your workflow or product logic"
+      icon: FileCheck,
+      title: "Complete Documentation Package",
+      description: "All code delivered with comprehensive maintenance instructions, deployment guides, API documentation, and team handover materials for seamless transitions"
     }
   ];
 
