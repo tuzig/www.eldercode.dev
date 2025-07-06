@@ -25,7 +25,8 @@ import {
   Phone,
   Microscope,
   TestTube,
-  FileCheck
+  FileCheck,
+  ExternalLink
 } from "lucide-react";
 
 const Index = () => {
@@ -418,10 +419,21 @@ const Index = () => {
                   </div>
                   <div>
                     <label className="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Brief App Description</label>
+                    <div className="mb-2">
+                      <a 
+                        href="https://blog.hubspot.com/service/what-is-user-journey-mapping" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-xs text-cyan hover:text-cyan-400 transition-colors"
+                      >
+                        What are user journeys? 
+                        <ExternalLink className="h-3 w-3 ml-1" />
+                      </a>
+                    </div>
                     <Textarea
                       value={formData.description}
                       onChange={(e) => handleInputChange("description", e.target.value)}
-                      placeholder="Tell us about your app, current challenges, and what you're hoping to achieve..."
+                      placeholder="Tell us about your app, users and their journeys"
                       rows={4}
                       className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan resize-none"
                       required
