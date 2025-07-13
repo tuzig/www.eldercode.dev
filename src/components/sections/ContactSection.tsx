@@ -28,7 +28,7 @@ const ContactSection = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data as any).toString(),
+      body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
     })
       .then(() => navigate("/submission-success"))
       .catch((error) => alert(error));

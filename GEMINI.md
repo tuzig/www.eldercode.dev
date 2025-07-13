@@ -37,8 +37,9 @@ The following scripts are defined in `package.json`:
 - `src/components/sections/`: Contains larger, page-specific sections composed from the UI components (e.g., HeroSection, ServicesSection).
 - `public/`: Contains static assets like `favicon.ico` and `robots.txt`.
 
+## Styles
+- Avoid using `any` in TypeScript. Prefer specific types or `unknown` for better type safety.
+
 ## TODO 
 
 - remove the border around the section that begins with "Describe the core user flows of your application."
-
-
