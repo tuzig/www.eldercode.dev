@@ -4,8 +4,36 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    platform: "",
+    userJourneys: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data as any).toString(),
+    })
+      .then(() => navigate("/submission-success"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <section id="contact" className="py-20 bg-dark-surface border-t border-dark-border">
       <div className="container mx-auto px-4">
@@ -19,8 +47,20 @@ const ContactSection = () => {
           
           <Card className="bg-dark-bg border-dark-border animate-scale-up hover:glow-cyan transition-all duration-300">
             <CardContent className="p-8">
-              <form name="contact" method="POST" data-netlify="true" action="/submission-success" className="space-y-6">
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
                 <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                  </label>
+                </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Name</label>
@@ -31,6 +71,8 @@ const ContactSection = () => {
                       className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
                       required
                       autoComplete="name"
+                      value={formData.name}
+                      onChange={handleChange}
                     />
                   </div>
                   <div>
@@ -43,6 +85,8 @@ const ContactSection = () => {
                       className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
                       required
                       autoComplete="email"
+                      value={formData.email}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -53,6 +97,8 @@ const ContactSection = () => {
                     name="platform"
                     placeholder="e.g., Lovable, Cursor, Bubble, Webflow"
                     className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
+                    value={formData.platform}
+                    onChange={handleChange}
                   />
                 </div>
                 <div>
@@ -73,6 +119,8 @@ const ContactSection = () => {
                     placeholder="Describe the key flows in your app"
                     rows={3}
                     className="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan resize-none"
+                    value={formData.userJourneys}
+                    onChange={handleChange}
                   />
                 </div>
                 <Button 
