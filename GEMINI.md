@@ -36,3 +36,7 @@ The following scripts are defined in `package.json`:
 - `src/components/ui/`: Contains reusable, generic UI components (e.g., Button, Card, Input), following `shadcn/ui` patterns.
 - `src/components/sections/`: Contains larger, page-specific sections composed from the UI components (e.g., HeroSection, ServicesSection).
 - `public/`: Contains static assets like `favicon.ico` and `robots.txt`.
+
+
+
+
