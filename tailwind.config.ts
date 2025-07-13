@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -173,7 +174,7 @@ export default {
 						boxShadow: '0 0 10px rgba(34, 211, 238, 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 25px rgba(34, 211, 238, 0.8)'
+						boxShadow: '0 0 25px rgba(34, 211, 238,.8)'
 					}
 				}
 			},
@@ -193,5 +194,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

@@ -14,13 +14,6 @@ const Header = () => {
             <a href="#services" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Services</a>
             <a href="#platforms" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Stack</a>
             <a href="#contact" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">About</a>
-            <Button 
-              size="sm" 
-              className="bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide glow-cyan"
-            >
-              <Microscope className="h-4 w-4 mr-2" />
-              REQUEST ANALYSIS
-            </Button>
           </div>
         </nav>
       </div>

@@ -24,20 +24,28 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               <Microscope className="h-6 w-6 mr-3" />
               REQUEST ANALYSIS & QUOTE
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
             </Button>
             
-            <Button 
-              variant="outline"
-              size="lg" 
-              className="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
-            >
-              <Phone className="mr-3 h-5 w-5" />
-              SCHEDULE STRATEGY CALL
-            </Button>
+            <a href="https://calendly.com/daonb/half-an-hour" target="_blank" rel="noopener noreferrer">
+              <Button 
+                variant="outline"
+                size="lg" 
+                className="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
+              >
+                <Phone className="mr-3 h-5 w-5" />
+                SCHEDULE A STRATEGY CALL
+              </Button>
+            </a>
           </div>
         </div>
       </div>
