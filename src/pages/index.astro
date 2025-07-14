@@ -258,56 +258,8 @@ const auditChecklist = [
         </div>
 
         <blockquote class="text-3xl italic text-gradient-purple font-display">
-          "We're not here to refactor your app. We're here to scale your company."
+            "We're not here to refactor your app,<br />We're here to help you scale your business."
         </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-dark-bg">
-    <div class="container mx-auto px-4">
-      <div class="max-w-5xl mx-auto text-center mb-12 animate-fade-up">
-        <h2 class="text-5xl font-display font-bold mb-6">
-          <Microscope class="inline-block h-12 w-12 mr-4 text-purple" />
-          <span class="text-gradient-purple">Code & Risk Audit;</span> <br />Free, in up to 5 days
-        </h2>
-
-        <p class="text-xl text-dark-text-secondary mb-8">
-          Upload your no-code app or link your repo. We'll return a real architectural breakdown:
-        </p>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {auditChecklist.map((item) => (
-            <div
-              class="flex items-center space-x-3 bg-dark-surface p-4 rounded-lg border border-dark-border hover:border-cyan/30 transition-colors"
-            >
-              <CheckCircle2 class="h-5 w-5 text-cyan flex-shrink-0" />
-              <span class="font-medium font-mono text-sm uppercase tracking-wide">{item}</span>
-            </div>
-          ))}
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button
-            size="lg"
-            class="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
-            id="scroll-to-rfq-2"
-          >
-            <Microscope class="h-6 w-6 mr-3" />
-            REQUEST ANALYSIS & QUOTE
-            <ArrowRight class="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
-          </Button>
-
-          <a href="https://calendly.com/daonb/half-an-hour" target="_blank" rel="noopener noreferrer">
-            <Button
-              variant="outline"
-              size="lg"
-              class="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide"
-            >
-              👨‍💻 SCHEDULE A STRATEGY CALL
-            </Button>
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -316,9 +268,9 @@ const auditChecklist = [
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-12 animate-fade-up">
-          <h2 class="text-5xl font-display font-bold mb-6">Ready to Scale Your Prototype?</h2>
+          <h2 class="text-5xl font-display font-bold mb-6">Ready to Scale Up?</h2>
           <p class="text-lg text-dark-text-secondary">
-            Get a free AI code audit today and discover how to transform your prototype into enterprise-grade infrastructure.
+            Get a free code audit today and discover how to transform your prototype into market-ready online service.
           </p>
         </div>
 
@@ -372,8 +324,17 @@ const auditChecklist = [
                 />
               </div>
               <div>
+                <label for="homeUrl" class="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Home URL</label>
+                <Input
+                  id="homeUrl"
+                  name="homeUrl"
+                  placeholder="e.g., https://yourapp.com"
+                  class="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
+                />
+              </div>
+              <div>
                 <label for="userJourneys" class="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">User Journeys</label>
-                <div class="mb-3 p-3 bg-dark-surface border border-dark-border rounded-lg text-xs text-dark-text-secondary space-y-2">
+                <div class="mb-3 p-3 bg-dark-surface rounded-lg text-xs text-dark-text-secondary space-y-2">
                   <p class="font-bold text-cyan">Describe the core user flows of your application.</p>
                   <p>This helps us understand the complexity and critical paths of your app. Please be as detailed as possible.</p>
                   <p class="font-semibold">For example:</p>
