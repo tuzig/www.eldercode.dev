@@ -4,11 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const ContactSection = () => {
-  const navigate = useNavigate();
+const RFQSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,22 +18,8 @@ const ContactSection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const data = new FormData(form);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
-    })
-      .then(() => navigate("/submission-success"))
-      .catch((error) => alert(error));
-  };
-
   return (
-    <section id="contact" className="py-20 bg-dark-surface border-t border-dark-border">
+    <section id="rfq" className="py-20 bg-dark-surface border-t border-dark-border">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 animate-fade-up">
@@ -48,14 +32,13 @@ const ContactSection = () => {
           <Card className="bg-dark-bg border-dark-border animate-scale-up hover:glow-cyan transition-all duration-300">
             <CardContent className="p-8">
               <form 
-                name="contact" 
+                name="RFQ" 
                 method="POST" 
                 data-netlify="true" 
-                data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
+                action="/submission-success"
                 className="space-y-6"
               >
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="rfq" />
                 <p className="hidden">
                   <label>
                     Don’t fill this out if you’re human: <input name="bot-field" />
@@ -141,4 +124,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default RFQSection;

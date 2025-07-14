@@ -1,4 +1,5 @@
 
+import "@/index.css";
 import Header from "@/components/sections/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import AffirmationStrip from "@/components/sections/AffirmationStrip";
@@ -7,7 +8,7 @@ import PlatformsSection from "@/components/sections/PlatformsSection";
 import CaseStudySection from "@/components/sections/CaseStudySection";
 import WhyUsSection from "@/components/sections/WhyUsSection";
 import LeadMagnetSection from "@/components/sections/LeadMagnetSection";
-import ContactSection from "@/components/sections/ContactSection";
+import RFQSection from "@/components/sections/RFQSection";
 import Footer from "@/components/sections/Footer";
 
 const Index = () => {
@@ -31,7 +32,7 @@ const Index = () => {
       <CaseStudySection />
       <WhyUsSection />
       <LeadMagnetSection />
-      <ContactSection />
+      <RFQSection />
       <Footer />
     </div>
   );

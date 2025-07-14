@@ -7,13 +7,9 @@ const HeroSection = () => {
     <section className="pt-20 pb-16 relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center animate-fade-up">
-          <div className="inline-flex items-center bg-dark-surface border border-dark-border rounded-full px-4 py-2 text-sm text-cyan mb-8 animate-pulse-glow">
-            <Rocket className="h-4 w-4 mr-2" />
-            <span className="font-mono uppercase tracking-wider">You Built Fast Now Scale With Experience</span>
-          </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-display font-bold mb-6 text-balance">
-            You Built It <span className="text-gradient-cyan animate-glitch">Fast</span>,<br />Now Make It <span className="text-gradient-purple">Unstoppable</span>
+            You Built It <span className="text-gradient-cyan animate-glitch">Fast</span>;<br />Now Make It <span className="text-gradient-purple">Unstoppable</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-dark-text-secondary mb-8 max-w-4xl mx-auto text-pretty font-light leading-relaxed">
@@ -25,7 +21,7 @@ const HeroSection = () => {
               size="lg" 
               className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
               onClick={() => {
-                const contactSection = document.getElementById("contact");
+                const contactSection = document.getElementById("rfq");
                 if (contactSection) {
                   contactSection.scrollIntoView({ behavior: "smooth" });
                 }

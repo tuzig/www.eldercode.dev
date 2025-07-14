@@ -12,7 +12,7 @@ const ServicesSection = () => {
     {
       icon: Cloud,
       title: "DevOps Setup & Scaling",
-      description: "Production-ready hosting that scales on Google Cloud, complete CI/CD pipelines, automated deployments, and infrastructure that grows with your business"
+      description: "Production-ready hosting that scales, complete CI/CD pipelines, automated deployments, and infrastructure that grows with your business"
     },
     {
       icon: TestTube,
@@ -41,7 +41,7 @@ const ServicesSection = () => {
               This isn't freelance. This is engineering.
             </p>
             <p className="text-base text-dark-text-secondary">
-              Every project is led by senior developers and infrastructure architects — people who've scaled real platforms, rebuilt fragile MVPs, and deployed software that holds under pressure. We use AI tools, yes — but they don't replace experience. They multiply it.
+              Every project is led by senior developers — someone who scaled real platforms, rebuilt fragile MVPs, and deployed software that holds under pressure. We also use AI tools — but they don't replace experience. They multiply it.
             </p>
           </div>
         </div>

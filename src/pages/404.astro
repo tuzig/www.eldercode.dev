@@ -1,0 +1,5 @@
+---
+import NotFound from './_NotFound.tsx';
+const pathname = Astro.url.pathname;
+---
+<NotFound client:load pathname={pathname} />

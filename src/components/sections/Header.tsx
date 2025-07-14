@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="text-2xl font-display font-bold text-gradient-cyan">
-            Break the Limit
+            Break No-Code Limits
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Services</a>

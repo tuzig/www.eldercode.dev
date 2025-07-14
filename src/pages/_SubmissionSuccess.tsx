@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import "@/index.css";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
@@ -25,7 +25,7 @@ const SubmissionSuccess = () => {
                 Thank you for filling the form. Please check your email for a confirmation and next steps.
               </p>
               <Button asChild size="lg" className="w-full bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide py-6">
-                <Link to="/">Return to Homepage</Link>
+                <a href="/">Return to Homepage</a>
               </Button>
             </CardContent>
           </Card>

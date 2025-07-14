@@ -41,7 +41,7 @@ const LeadMagnetSection = () => {
               size="lg"
               className="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow"
               onClick={() => {
-                const contactSection = document.getElementById("contact");
+                const contactSection = document.getElementById("rfq");
                 if (contactSection) {
                   contactSection.scrollIntoView({ behavior: "smooth" });
                 }
