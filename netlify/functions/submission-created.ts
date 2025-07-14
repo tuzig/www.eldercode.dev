@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const FormDataSchema = z.object({
   name: z.string(),
   email: z.string().email(),
-  message: z.string(),
+  userJourneys: z.string(),
 });
 
 export default async (req: Request) => {
@@ -16,14 +16,14 @@ export default async (req: Request) => {
     const { data } = payload;
 
     // Validate the form data against the schema
-    const { name, email, message } = FormDataSchema.parse(data);
+    const { name, email, userJourneys } = FormDataSchema.parse(data);
 
     // Send the email using Resend
     const { error } = await resend.emails.send({
       from: "ElderCode <rfq@eldercode.dev>",
       to: email,
       subject: `ElderCode next steps`,
-      html: `<p>You have a new message from <strong>${name}</strong> (${email}):</p><p>${message}</p>`,
+      html: `<p>You have a new message from <strong>${name}</strong> (${email}):</p><p>${userJourneys}</p>`,
     });
 
     if (error) {

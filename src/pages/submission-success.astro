@@ -1,4 +1,7 @@
 ---
-import SubmissionSuccess from './_SubmissionSuccess.tsx';
+import SubmissionSuccess from '@/components/SubmissionSuccess.astro';
+import Layout from '@/layouts/Layout.astro';
 ---
-<SubmissionSuccess client:load />
+<Layout title="Submission Success">
+  <SubmissionSuccess />
+</Layout>

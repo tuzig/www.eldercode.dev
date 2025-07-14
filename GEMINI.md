@@ -6,23 +6,20 @@ This project is the official website for ElderCode services, a service that tran
 
 ## Key Technologies
 
-- **Framework:** React
-- **Build Tool:** Vite
+- **Build Tool:** Astro
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS with `tailwindcss-animate`
 - **UI Components:**
     - A combination of custom components and primitives from Radix UI.
     - The structure suggests the use of `shadcn/ui` conventions (e.g., `components/ui`, `lib/utils.ts`).
-- **Routing:** React Router DOM (`react-router-dom`)
-- **State Management/Data Fetching:** TanStack Query (`@tanstack/react-query`)
-- **Forms:** React Hook Form (`react-hook-form`) with Zod (`zod`) for validation.
+- **Forms:** netlify forms
 - **Linting:** ESLint
 
 ## Available Scripts
 
 The following scripts are defined in `package.json`:
 
-- `npm run dev`: Starts the development server using Vite.
+- `npm run dev`: Starts the development server
 - `npm run build`: Creates a production-ready build of the application.
 - `npm run build:dev`: Creates a development build.
 - `npm run lint`: Lints the codebase using ESLint to check for errors and style issues.
