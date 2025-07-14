@@ -9,15 +9,15 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto text-center animate-fade-up">
           <div className="inline-flex items-center bg-dark-surface border border-dark-border rounded-full px-4 py-2 text-sm text-cyan mb-8 animate-pulse-glow">
             <Rocket className="h-4 w-4 mr-2" />
-            <span className="font-mono uppercase tracking-wider">You Built Fast. Now Scale With Experience.</span>
+            <span className="font-mono uppercase tracking-wider">You Built Fast Now Scale With Experience</span>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-display font-bold mb-6 text-balance">
-            You Built It <span className="text-gradient-cyan animate-glitch">Fast</span>. Now Make It <span className="text-gradient-purple">Unstoppable</span>.
+            You Built It <span className="text-gradient-cyan animate-glitch">Fast</span>,<br />Now Make It <span className="text-gradient-purple">Unstoppable</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-dark-text-secondary mb-8 max-w-4xl mx-auto text-pretty font-light leading-relaxed">
-            Our team of senior software engineers, architects, and DevOps experts transform no-code apps into quality services — fast, secure and scalable.
+            Our team of senior software engineers, architects, and DevOps experts transform no-code prototypes to quality services — fast, secure and scalable.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
