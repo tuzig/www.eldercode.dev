@@ -39,4 +39,6 @@ The following scripts are defined in `package.json`:
 
 ## TODO 
 
+- ✅ move the form to its own page and in its place in the home page put "Coming soon"
 - remove the border around the section that begins with "Describe the core user flows of your application."
+- 
