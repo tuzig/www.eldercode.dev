@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from "@/components/ui/button.astro";
+import Card from "@/components/ui/card.astro";
+import CardContent from "@/components/ui/CardContent.astro";
+import Input from "@/components/ui/input.astro";
+import Textarea from "@/components/ui/textarea.astro";
+import ArrowRight from "@/components/icons/ArrowRight.astro";
+---
+
+<Layout title="Request Quote - ElderCode">
+  <main class="min-h-screen bg-dark-bg">
+    <div class="pt-32 pb-20">
+      <section class="py-20 bg-dark-surface border-t border-dark-border">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12 animate-fade-up">
+              <h1 class="text-5xl font-display font-bold mb-6">Ready to Scale Up?</h1>
+              <p class="text-lg text-dark-text-secondary">
+                Get a free code audit today and discover how to transform your prototype into market-ready online service.
+              </p>
+            </div>
+
+            <Card class="bg-dark-bg border-dark-border animate-scale-up hover:glow-cyan transition-all duration-300">
+              <CardContent class="p-8">
+                <form
+                  name="rfq"
+                  method="POST"
+                  data-netlify="true"
+                  action="/submission-success"
+                  class="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="rfq" />
+                  <p class="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label for="name" class="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Name</label>
+                      <Input
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        class="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
+                        required
+                        autoComplete="name"
+                      />
+                    </div>
+                    <div>
+                      <label for="email" class="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Email</label>
+                      <Input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        class="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
+                        required
+                        autoComplete="email"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="platform" class="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Platform Used</label>
+                    <Input
+                      id="platform"
+                      name="platform"
+                      placeholder="e.g., Lovable, Cursor, Bubble, Webflow"
+                      class="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
+                    />
+                  </div>
+                  <div>
+                    <label for="homeUrl" class="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">Home URL</label>
+                    <Input
+                      id="homeUrl"
+                      name="homeUrl"
+                      placeholder="e.g., https://yourapp.com"
+                      class="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan"
+                    />
+                  </div>
+                  <div>
+                    <label for="userJourneys" class="text-sm font-mono font-medium text-cyan mb-2 block uppercase tracking-wide">User Journeys</label>
+                    <div class="mb-3 p-3 bg-dark-surface rounded-lg text-xs text-dark-text-secondary space-y-2">
+                      <p class="font-bold text-cyan">Describe the core user flows of your application.</p>
+                      <p>This helps us understand the complexity and critical paths of your app. Please be as detailed as possible.</p>
+                      <p class="font-semibold">For example:</p>
+                      <ul class="list-disc list-inside pl-2 space-y-1">
+                        <li><strong class="text-dark-text-primary">E-commerce:</strong> User searches for product → adds to cart → proceeds to checkout → enters shipping info → pays with credit card → receives order confirmation.</li>
+                        <li><strong class="text-dark-text-primary">Social App:</strong> User signs up → completes profile → searches for friends → sends a connection request → posts a status update.</li>
+                        <li><strong class="text-dark-text-primary">SaaS Tool:</strong> User creates an account → creates a new project → invites team members → assigns tasks → tracks progress on a dashboard.</li>
+                      </ul>
+                    </div>
+                    <Textarea
+                      id="userJourneys"
+                      name="userJourneys"
+                      placeholder="Describe the key flows in your app"
+                      rows={3}
+                      class="bg-dark-surface border-dark-border text-dark-text-primary focus:border-cyan resize-none"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    class="w-full bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide py-6"
+                    aria-label="Request Analysis and Quote"
+                  >
+                    REQUEST ANALYSIS & QUOTE
+                    <ArrowRight class="ml-3 h-5 w-5" />
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
