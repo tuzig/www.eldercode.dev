@@ -1,0 +1,19 @@
+- icon: "code2"
+  title: "Code Cleanup & Refactoring"
+  description: "Remove unneeded packages and imports, eliminate inline CSS, break down long functions, and improve overall code readability for maintainable production systems"
+
+- icon: "cloud"
+  title: "DevOps Setup & Scaling"
+  description: "Production-ready hosting that scales, complete CI/CD pipelines, automated deployments, and infrastructure that grows with your business"
+
+- icon: "test-tube"
+  title: "Comprehensive Testing Suite"
+  description: "Unit tests for backend functionality, end-to-end adaptive testing for user workflows, automated test coverage, and quality assurance protocols"
+
+- icon: "shield"
+  title: "GDPR Compliance & Security"
+  description: "Full GDPR compliance implementation, data protection protocols, privacy policy integration, cookie management, and regulatory compliance audit"
+
+- icon: "file-check"
+  title: "Complete Documentation Package"
+  description: "All code delivered with comprehensive maintenance instructions, deployment guides, API documentation, and team handover materials for seamless transitions"

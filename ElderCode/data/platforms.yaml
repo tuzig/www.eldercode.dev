@@ -1,0 +1,23 @@
+- name: "Lovable"
+  description: "app exports, logic parsing, AI build-to-code mapping"
+
+- name: "Cursor"
+  description: "prompt chains, AI logic workflows, VS Code-based apps"
+
+- name: "Base44"
+  description: "migration to Firebase/Vercel with clean backend-first structure"
+
+- name: "Bubble"
+  description: "100+ apps evolved"
+
+- name: "Glide"
+  description: "100+ apps evolved"
+
+- name: "Adalo"
+  description: "100+ apps evolved"
+
+- name: "Webflow"
+  description: "100+ apps evolved"
+
+- name: "Softr"
+  description: "100+ apps evolved"
