@@ -3,12 +3,12 @@
     <div class="container mx-auto px-4 py-4">
       <nav class="flex items-center justify-between">
         <div class="text-2xl font-display font-bold text-gradient-cyan">
-          Break No-Code Limits
+          {{ .Site.Data.index.footer.title }}
         </div>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#services" class="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Services</a>
-          <a href="#platforms" class="text-dark-text-secondary hover:text-cyan transition-colors font-medium">Stack</a>
-          <a href="#contact" class="text-dark-text-secondary hover:text-cyan transition-colors font-medium">About</a>
+          {{ range .Site.Data.index.header.nav }}
+            <a href="{{ .url }}" class="text-dark-text-secondary hover:text-cyan transition-colors font-medium">{{ .title }}</a>
+          {{ end }}
         </div>
       </nav>
     </div>
@@ -19,28 +19,28 @@
       <div class="max-w-5xl mx-auto text-center animate-fade-up">
 
         <h1 class="text-6xl md:text-8xl font-display font-bold mb-6 text-balance">
-          You Built It <span class="text-gradient-cyan animate-glitch">Fast</span>;<br />Now Make It <span class="text-gradient-purple">Unstoppable</span>
+          {{ .Site.Data.index.hero.title | safeHTML }}
         </h1>
 
         <p class="text-xl md:text-2xl text-dark-text-secondary mb-8 max-w-4xl mx-auto text-pretty font-light leading-relaxed">
-          Our team of senior software engineers, architects, and DevOps experts transform no-code prototypes to quality services — fast, secure and scalable.
+          {{ .Site.Data.index.hero.subtitle }}
         </p>
 
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <a href="/request-quote"
+          <a href="{{ .Site.Data.index.hero.cta1.url }}"
             class="text-lg px-10 py-8 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide animate-pulse-glow rounded-md border-0 cursor-pointer inline-flex items-center"
           >
-            {{ partial "icons/microscope" . }}
-            REQUEST ANALYSIS & QUOTE
+            {{ partial (printf "icons/%s" .Site.Data.index.hero.cta1.icon) . }}
+            {{ .Site.Data.index.hero.cta1.text }}
             {{ partial "icons/arrow-right" . }}
           </a>
 
-          <a href="https://calendly.com/daonb/half-an-hour" target="_blank" rel="noopener noreferrer">
+          <a href="{{ .Site.Data.index.hero.cta2.url }}" target="_blank" rel="noopener noreferrer">
             <button
               class="text-lg px-8 py-8 border-cyan/30 text-cyan hover:bg-cyan/10 font-mono uppercase tracking-wide border rounded-md bg-transparent cursor-pointer inline-flex items-center"
             >
-              {{ partial "icons/phone" . }}
-              SCHEDULE A STRATEGY CALL
+              {{ partial (printf "icons/%s" .Site.Data.index.hero.cta2.icon) . }}
+              {{ .Site.Data.index.hero.cta2.text }}
             </button>
           </a>
         </div>
@@ -66,13 +66,13 @@
   <section id="services" class="py-20 bg-dark-bg">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
-        <h2 class="text-5xl font-display font-bold mb-6">What We Actually Do</h2>
+        <h2 class="text-5xl font-display font-bold mb-6">{{ .Site.Data.index.what_we_do.title }}</h2>
         <div class="bg-dark-surface py-8 px-6 rounded-lg border border-dark-border mb-8">
           <p class="text-lg text-dark-text-secondary mb-4">
-            This isn't freelance. This is engineering.
+            {{ .Site.Data.index.what_we_do.subtitle }}
           </p>
           <p class="text-base text-dark-text-secondary">
-            Every project is led by senior developers — someone who scaled real platforms, rebuilt fragile MVPs, and deployed software that holds under pressure. We also use AI tools — but they don't replace experience. They multiply it.
+            {{ .Site.Data.index.what_we_do.description }}
           </p>
         </div>
       </div>
@@ -97,7 +97,7 @@
   <section id="platforms" class="py-20 bg-dark-surface border-y border-dark-border">
     <div class="container mx-auto px-4">
       <div class="max-w-5xl mx-auto text-center mb-16 animate-fade-up">
-        <h2 class="text-5xl font-display font-bold mb-6">Low-Code We Know Inside-Out</h2>
+        <h2 class="text-5xl font-display font-bold mb-6">{{ .Site.Data.index.low_code.title }}</h2>
 
         <div class="grid md:grid-cols-2 gap-8 mb-8">
           {{ range $platform := site.Data.platforms }}
@@ -119,7 +119,7 @@
 
         <div class="text-center bg-gradient-to-r from-cyan/10 to-purple/10 py-8 px-6 rounded-lg border border-cyan/20">
           <p class="text-lg font-medium italic mb-4 text-gradient-cyan font-display">
-            "If you built on it, we've probably rebuilt from it. Our AI tooling can read your logic. Our engineers turn it into code your next team will thank you for."
+            {{ .Site.Data.index.low_code.quote | safeHTML }}
           </p>
         </div>
       </div>
@@ -132,15 +132,15 @@
         <div class="bg-gradient-to-r from-dark-surface via-dark-bg to-dark-surface border border-cyan/20 animate-scale-up glow-cyan rounded-lg">
           <div class="p-12 text-center">
             <h2 class="text-4xl font-display font-bold mb-6 text-gradient-cyan">
-              From Bubble MVP → 7-Figure ARR → Zero Downtime Migration
+              {{ .Site.Data.index.case_study.title }}
             </h2>
             <p class="text-lg mb-8 text-dark-text-secondary text-pretty">
-              They came to us with traction but crashes. We rebuilt in 30 days on a clean Supabase stack, plugged in Stripe Connect, and shipped an async-notification engine. Zero downtime. First enterprise deal signed 2 weeks later.
+              {{ .Site.Data.index.case_study.description }}
             </p>
             <div class="bg-dark-bg border border-dark-border rounded-lg p-6 font-mono">
               {{ partial "icons/terminal" . }}
               <blockquote class="text-xl font-medium text-gradient-purple">
-                'They made us look like we had an engineering team of 20. We had 2.'
+                {{ .Site.Data.index.case_study.quote }}
               </blockquote>
             </div>
           </div>
@@ -152,7 +152,7 @@
   <section class="py-20 bg-dark-surface border-y border-dark-border">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-5xl font-display font-bold mb-12">Why We're Doing This</h2>
+        <h2 class="text-5xl font-display font-bold mb-12">{{ .Site.Data.index.why_we_do_it.title }}</h2>
 
         <div class="text-left bg-dark-bg p-8 rounded-lg border border-dark-border mb-8 relative overflow-hidden">
           <div class="absolute inset-0 opacity-10 pointer-events-none">
@@ -161,28 +161,28 @@
 
           <div class="relative z-10">
             <p class="text-lg mb-4 text-dark-text-secondary">
-              Because we love this sh*t.
+              {{ .Site.Data.index.why_we_do_it.intro }}
             </p>
             <p class="text-base mb-4 text-dark-text-secondary">
-              Benny's been coding since 1982 — back when you soldered cables to transfer files between Unix stations and every byte of memory had to be earned. He's lived through the evolution from those early computing days to helping startups scale up with proper testing infrastructure.
+              {{ .Site.Data.index.why_we_do_it.p1 }}
             </p>
             <p class="text-base mb-4 text-dark-text-secondary">
-              Back in the last millennium, Benny developed a software testing tool called "The Cloud" and built a company around it, which was later sold. A testing tools company that helped teams ship reliable code faster. He's still shipping code daily, still obsessed with quality.
+              {{ .Site.Data.index.why_we_do_it.p2 }}
             </p>
             <p class="text-base mb-4 text-dark-text-secondary">
-              We've worked on mainframe VMS, Unix, Mac, Windows, Docker, cloud platforms, and now AI. This is the most exciting era of software ever — and we're here to shape it.
+              {{ .Site.Data.index.why_we_do_it.p3 }}
             </p>
             <p class="text-base mb-4 text-dark-text-secondary">
-              We believe in founders. We believe in fast. But we <em>know</em> that what wins is clean architecture, human-led strategy, and production-level discipline.
+              {{ .Site.Data.index.why_we_do_it.p4 | safeHTML }}
             </p>
             <p class="text-base text-dark-text-secondary">
-              This isn't just work. This is craft. And AI's just the newest brush we've mastered.
+              {{ .Site.Data.index.why_we_do_it.p5 }}
             </p>
           </div>
         </div>
 
         <blockquote class="text-3xl italic text-gradient-purple font-display">
-            "We're not here to refactor your app,<br />We're here to help you scale your business."
+            {{ .Site.Data.index.why_we_do_it.quote | safeHTML }}
         </blockquote>
       </div>
     </div>
@@ -192,15 +192,15 @@
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-12 animate-fade-up">
-          <h2 class="text-5xl font-display font-bold mb-6">Ready to Scale Up?</h2>
+          <h2 class="text-5xl font-display font-bold mb-6">{{ .Site.Data.index.ready_to_scale.title }}</h2>
           <p class="text-lg text-dark-text-secondary mb-8">
-            Get a free code audit today and discover how to transform your prototype into market-ready online service.
+            {{ .Site.Data.index.ready_to_scale.description }}
           </p>
           <div class="text-center">
             <div class="inline-block bg-gradient-to-r from-cyan to-purple-500 p-[2px] rounded-lg">
               <div class="bg-dark-bg px-8 py-4 rounded-lg">
-                <p class="text-2xl font-display font-bold text-gradient-cyan">Coming Soon</p>
-                <p class="text-dark-text-secondary text-sm mt-2">Our request form is being enhanced for a better experience</p>
+                <p class="text-2xl font-display font-bold text-gradient-cyan">{{ .Site.Data.index.ready_to_scale.coming_soon.title }}</p>
+                <p class="text-dark-text-secondary text-sm mt-2">{{ .Site.Data.index.ready_to_scale.coming_soon.description }}</p>
               </div>
             </div>
           </div>
@@ -213,46 +213,43 @@
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-4 gap-8 mb-12">
         <div>
-          <h3 class="text-2xl font-display font-bold mb-4 text-gradient-cyan">Break the Limit</h3>
+          <h3 class="text-2xl font-display font-bold mb-4 text-gradient-cyan">{{ .Site.Data.index.footer.title }}</h3>
           <p class="text-dark-text-secondary text-sm mb-4 font-mono uppercase tracking-wide">
-            Built fast. Rebuilt right. Scaled forever.
+            {{ .Site.Data.index.footer.subtitle }}
           </p>
           <p class="text-dark-text-muted text-xs">
-            We transform no-code MVPs into production-grade infrastructure with senior engineering expertise.
+            {{ .Site.Data.index.footer.description }}
           </p>
         </div>
         <div>
-          <h4 class="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">Quick Links</h4>
+          <h4 class="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">{{ .Site.Data.index.footer.quick_links.title }}</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#services" class="text-dark-text-secondary hover:text-cyan transition-colors">Services</a></li>
-            <li><a href="#platforms" class="text-dark-text-secondary hover:text-cyan transition-colors">Stack</a></li>
-            <li><a href="#contact" class="text-dark-text-secondary hover:text-cyan transition-colors">About</a></li>
+            {{ range .Site.Data.index.footer.quick_links.links }}
+              <li><a href="{{ .url }}" class="text-dark-text-secondary hover:text-cyan transition-colors">{{ .title }}</a></li>
+            {{ end }}
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">Legal</h4>
+          <h4 class="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">{{ .Site.Data.index.footer.legal.title }}</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-dark-text-secondary hover:text-cyan transition-colors">Privacy</a></li>
-            <li><a href="#" class="text-dark-text-secondary hover:text-cyan transition-colors">Terms</a></li>
+            {{ range .Site.Data.index.footer.legal.links }}
+              <li><a href="{{ .url }}" class="text-dark-text-secondary hover:text-cyan transition-colors">{{ .title }}</a></li>
+            {{ end }}
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">Connect</h4>
+          <h4 class="font-semibold mb-4 font-mono uppercase tracking-wide text-cyan">{{ .Site.Data.index.footer.connect.title }}</h4>
           <div class="flex space-x-4">
-            <a href="#" class="text-dark-text-secondary hover:text-cyan transition-colors">
-              {{ partial "icons/github" . }}
-            </a>
-            <a href="#" class="text-dark-text-secondary hover:text-cyan transition-colors">
-              {{ partial "icons/linkedin" . }}
-            </a>
-            <a href="#" class="text-dark-text-secondary hover:text-cyan transition-colors">
-              {{ partial "icons/twitter" . }}
-            </a>
+            {{ range .Site.Data.index.footer.connect.links }}
+              <a href="{{ .url }}" class="text-dark-text-secondary hover:text-cyan transition-colors">
+                {{ partial (printf "icons/%s" .icon) . }}
+              </a>
+            {{ end }}
           </div>
         </div>
       </div>
       <div class="border-t border-dark-border pt-8 text-center text-sm text-dark-text-muted">
-        <p>&copy; 2025 ElderCode. All rights reserved.</p>
+        <p>{{ .Site.Data.index.footer.copyright | safeHTML }}</p>
       </div>
     </div>
   </footer>

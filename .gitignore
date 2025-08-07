@@ -29,3 +29,4 @@ dist-ssr
 .netlify
 public/
 node_modules/
+.hugo_build.lock

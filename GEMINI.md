@@ -41,5 +41,5 @@ The following scripts are defined in `package.json`:
 
 - ✅ move the form to its own page and in its place in the home page put "Coming soon"
 - ✅ remove the border around the section that begins with "Describe the core user flows of your application."
-- Refactor texts our of layout/index.html and into a new data/index.yaml file
+- ✅ Refactor texts our of layout/index.html and into a new data/index.yaml file
 - 

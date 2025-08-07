@@ -1,0 +1,75 @@
+header:
+  nav:
+    - title: Services
+      url: "#services"
+    - title: Stack
+      url: "#platforms"
+    - title: About
+      url: "#contact"
+hero:
+  title: "You Built It <span class='text-gradient-cyan animate-glitch'>Fast</span>;<br />Now Make It <span class='text-gradient-purple'>Unstoppable</span>"
+  subtitle: "Our team of senior software engineers, architects, and DevOps experts transform no-code prototypes to quality services — fast, secure and scalable."
+  cta1:
+    text: "REQUEST ANALYSIS & QUOTE"
+    url: "/request-quote"
+    icon: "microscope"
+  cta2:
+    text: "SCHEDULE A STRATEGY CALL"
+    url: "https://calendly.com/daonb/half-an-hour"
+    icon: "phone"
+what_we_do:
+  title: "What We Actually Do"
+  subtitle: "This isn't freelance. This is engineering."
+  description: "Every project is led by senior developers — someone who scaled real platforms, rebuilt fragile MVPs, and deployed software that holds under pressure. We also use AI tools — but they don't replace experience. They multiply it."
+low_code:
+  title: "Low-Code We Know Inside-Out"
+  quote: "\"If you built on it, we've probably rebuilt from it. Our AI tooling can read your logic. Our engineers turn it into code your next team will thank you for.\""
+case_study:
+  title: "From Bubble MVP → 7-Figure ARR → Zero Downtime Migration"
+  description: "They came to us with traction but crashes. We rebuilt in 30 days on a clean Supabase stack, plugged in Stripe Connect, and shipped an async-notification engine. Zero downtime. First enterprise deal signed 2 weeks later."
+  quote: "'They made us look like we had an engineering team of 20. We had 2.'"
+why_we_do_it:
+  title: "Why We're Doing This"
+  intro: "Because we love this sh*t."
+  p1: "Benny's been coding since 1982 — back when you soldered cables to transfer files between Unix stations and every byte of memory had to be earned. He's lived through the evolution from those early computing days to helping startups scale up with proper testing infrastructure."
+  p2: "Back in the last millennium, Benny developed a software testing tool called \"The Cloud\" and built a company around it, which was later sold. A testing tools company that helped teams ship reliable code faster. He's still shipping code daily, still obsessed with quality."
+  p3: "We've worked on mainframe VMS, Unix, Mac, Windows, Docker, cloud platforms, and now AI. This is the most exciting era of software ever — and we're here to shape it."
+  p4: "We believe in founders. We believe in fast. But we <em>know</em> that what wins is clean architecture, human-led strategy, and production-level discipline."
+  p5: "This isn't just work. This is craft. And AI's just the newest brush we've mastered."
+  quote: "\"We're not here to refactor your app,<br />We're here to help you scale your business.\""
+ready_to_scale:
+  title: "Ready to Scale Up?"
+  description: "Get a free code audit today and discover how to transform your prototype into market-ready online service."
+  coming_soon:
+    title: "Coming Soon"
+    description: "Our request form is being enhanced for a better experience"
+footer:
+  title: "Break the Limit"
+  subtitle: "Built fast. Rebuilt right. Scaled forever."
+  description: "We transform no-code MVPs into production-grade infrastructure with senior engineering expertise."
+  quick_links:
+    title: "Quick Links"
+    links:
+      - title: "Services"
+        url: "#services"
+      - title: "Stack"
+        url: "#platforms"
+      - title: "About"
+        url: "#contact"
+  legal:
+    title: "Legal"
+    links:
+      - title: "Privacy"
+        url: "#"
+      - title: "Terms"
+        url: "#"
+  connect:
+    title: "Connect"
+    links:
+      - icon: "github"
+        url: "#"
+      - icon: "linkedin"
+        url: "#"
+      - icon: "twitter"
+        url: "#"
+  copyright: "&copy; 2025 ElderCode. All rights reserved."
