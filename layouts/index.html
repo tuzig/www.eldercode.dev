@@ -188,6 +188,46 @@
     </div>
   </section>
 
+  <section id="menu-of-services" class="py-20 bg-dark-bg">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16 animate-fade-up">
+        <h2 class="text-5xl font-display font-bold mb-4 text-gradient-cyan">{{ .Site.Data.index.menu_of_services.title }}</h2>
+        <p class="text-lg text-dark-text-secondary">{{ .Site.Data.index.menu_of_services.subtitle }}</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-dark-surface border border-dark-border rounded-lg shadow-lg">
+        <div class="p-8">
+          <h3 class="text-3xl font-display font-bold text-center mb-8 text-cyan tracking-widest uppercase">{{ .Site.Data.index.menu_of_services.starters_title }}</h3>
+          <div class="grid gap-6">
+            {{ range .Site.Data.menu.starters }}
+            <div class="flex justify-between items-center border-b border-dashed border-dark-border pb-4">
+              <div>
+                <p class="text-lg font-semibold text-dark-text-primary">{{ .item }}</p>
+                <p class="text-sm text-dark-text-secondary">{{ .delivery }}</p>
+              </div>
+              <p class="text-lg font-mono text-cyan">{{ .price }}</p>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        <div class="p-8 border-t border-dark-border">
+          <h3 class="text-3xl font-display font-bold text-center mb-8 text-purple-400 tracking-widest uppercase">{{ .Site.Data.index.menu_of_services.entrees_title }}</h3>
+          <div class="grid gap-6">
+            {{ range .Site.Data.menu.tbd }}
+            <div class="flex justify-between items-center border-b border-dashed border-dark-border pb-4">
+              <div>
+                <p class="text-lg font-semibold text-dark-text-primary">{{ .item }}</p>
+                <p class="text-sm text-dark-text-secondary">{{ .delivery }}</p>
+              </div>
+              <p class="text-lg font-mono text-purple-400">{{ .price }}</p>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="rfq" class="py-20 bg-dark-surface border-t border-dark-border">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto">

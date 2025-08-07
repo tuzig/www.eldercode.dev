@@ -20,8 +20,8 @@
       </div>
 
       <div class="bg-dark-bg p-8 rounded-lg">
-        <form name="request-quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
-          <input type="hidden" name="form-name" value="request-quote" />
+        <form name="onboarding" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+          <input type="hidden" name="form-name" value="onboarding" />
           <p class="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
@@ -46,12 +46,12 @@
 
           <div class="mb-6">
             <label for="user-flows" class="block text-sm font-mono uppercase tracking-wider text-dark-text-secondary mb-2">Describe the core user flows of your application.</label>
-            <textarea id="user-flows" name="user-flows" rows="6" class="w-full bg-dark-surface border border-dark-border rounded-md px-4 py-3 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-cyan" required></textarea>
+            <textarea id="user-flows" name="user-flows" rows="6" class="w-full bg-dark-surface border-dark-border rounded-md px-4 py-3 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-cyan" required></textarea>
           </div>
 
           <div class="text-center">
             <button type="submit" class="text-lg px-10 py-5 group bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide rounded-md border-0 cursor-pointer inline-flex items-center">
-              Request Analysis & Quote
+              Start Onboarding
             </button>
           </div>
         </form>

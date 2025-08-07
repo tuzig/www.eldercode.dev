@@ -6,7 +6,7 @@ This project is the official website for ElderCode services, a service that tran
 
 ## Key Technologies
 
-- **Build Tool:** Astro
+- **Build Tool:** Hugo
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS with `tailwindcss-animate`
 - **UI Components:**
@@ -17,13 +17,9 @@ This project is the official website for ElderCode services, a service that tran
 
 ## Available Scripts
 
-The following scripts are defined in `package.json`:
-
-- `npm run dev`: Starts the development server
-- `npm run build`: Creates a production-ready build of the application.
-- `npm run build:dev`: Creates a development build.
-- `npm run lint`: Lints the codebase using ESLint to check for errors and style issues.
-- `npm run preview`: Serves the production build locally for previewing.
+- `hugo server -D &`: Starts the development server.
+- `hugo`: Creates a production-ready build of the application.
+- `hugo server`: Serves the production build locally for previewing.
 
 ## Project Structure Highlights
 
@@ -33,6 +29,9 @@ The following scripts are defined in `package.json`:
 - `src/components/ui/`: Contains reusable, generic UI components (e.g., Button, Card, Input), following `shadcn/ui` patterns.
 - `src/components/sections/`: Contains larger, page-specific sections composed from the UI components (e.g., HeroSection, ServicesSection).
 - `public/`: Contains static assets like `favicon.ico` and `robots.txt`.
+
+## Local Development
+- The dev server runs on `http://localhost:1313`
 
 ## Styles
 - Avoid using `any` in TypeScript. Prefer specific types or `unknown` for better type safety.
@@ -44,4 +43,3 @@ The following scripts are defined in `package.json`:
 - ✅ Refactor texts our of layout/index.html and into a new data/index.yaml file
 - ✅ Add a new section to the home page called "Menu of Services".
 - ✅ Change "Request Analysis & quote" to "Menu of Services" and change the link to the menu's anchor
-
