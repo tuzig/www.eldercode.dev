@@ -19,7 +19,7 @@ hero:
     icon: "phone"
 what_we_do:
   title: "What We Actually Do"
-  subtitle: "This isn't freelance. This is engineering."
+  subtitle: "This isn't freelance. This is engineering"
   description: "Every project is led by senior developers — someone who scaled real platforms, rebuilt fragile MVPs, and deployed software that holds under pressure. We also use AI tools — but they don't replace experience. They multiply it."
 low_code:
   title: "Low-Code We Know Inside-Out"
@@ -30,12 +30,12 @@ case_study:
   quote: "'They made us look like we had an engineering team of 20. We had 2.'"
 menu_of_services:
   title: "Menu of Services"
-  subtitle: "A la carte services to get you to the next level."
+  subtitle: "A la carte services to get you to the next level"
   starters_title: "Starters"
   entrees_title: "Entrees"
 why_we_do_it:
   title: "Why We're Doing This"
-  intro: "Because we love this sh*t."
+  intro: "Because we love this sh*t"
   p1: "Benny's been coding since 1982 — back when you soldered cables to transfer files between Unix stations and every byte of memory had to be earned. He's lived through the evolution from those early computing days to helping startups scale up with proper testing infrastructure."
   p2: "Back in the last millennium, Benny developed a software testing tool called \"The Cloud\" and built a company around it, which was later sold. A testing tools company that helped teams ship reliable code faster. He's still shipping code daily, still obsessed with quality."
   p3: "We've worked on mainframe VMS, Unix, Mac, Windows, Docker, cloud platforms, and now AI. This is the most exciting era of software ever — and we're here to shape it."
@@ -44,14 +44,14 @@ why_we_do_it:
   quote: "\"We're not here to refactor your app,<br />We're here to help you scale your business.\""
 ready_to_scale:
   title: "Ready to Scale Up?"
-  description: "Get a free code audit today and discover how to transform your prototype into market-ready online service."
+  description: "Get a free code audit today and discover how to transform your prototype into market-ready online service"
   coming_soon:
     title: "Coming Soon"
     description: "Our request form is being enhanced for a better experience"
 footer:
   title: "Break the Limit"
-  subtitle: "Built fast. Rebuilt right. Scaled forever."
-  description: "We transform no-code MVPs into production-grade infrastructure with senior engineering expertise."
+  subtitle: "Built fast. Rebuilt right. Scaled forever"
+  description: "We transform no-code MVPs into production-grade infrastructure with senior engineering expertise"
   quick_links:
     title: "Quick Links"
     links:
@@ -77,4 +77,4 @@ footer:
         url: "#"
       - icon: "twitter"
         url: "#"
-  copyright: "&copy; 2025 ElderCode. All rights reserved."
+  copyright: "&copy; 2025 ElderCode. All rights reserved"
