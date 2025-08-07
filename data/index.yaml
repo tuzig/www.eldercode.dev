@@ -8,11 +8,11 @@ header:
       url: "#contact"
 hero:
   title: "You Built It <span class='text-gradient-cyan animate-glitch'>Fast</span>;<br />Now Make It <span class='text-gradient-purple'>Unstoppable</span>"
-  subtitle: "Our team of senior software engineers, architects, and DevOps experts transform no-code prototypes to quality services — fast, secure and scalable."
+  subtitle: "Our team of senior software engineers, architects, and DevOps experts transform no-code prototypes to quality services — fast, secure and scalable"
   cta1:
-    text: "REQUEST ANALYSIS & QUOTE"
-    url: "/request-quote"
-    icon: "microscope"
+    text: "MENU OF SERVICES"
+    url: "#menu-of-services"
+    icon: "menu"
   cta2:
     text: "SCHEDULE A STRATEGY CALL"
     url: "https://calendly.com/daonb/half-an-hour"
@@ -28,6 +28,11 @@ case_study:
   title: "From Bubble MVP → 7-Figure ARR → Zero Downtime Migration"
   description: "They came to us with traction but crashes. We rebuilt in 30 days on a clean Supabase stack, plugged in Stripe Connect, and shipped an async-notification engine. Zero downtime. First enterprise deal signed 2 weeks later."
   quote: "'They made us look like we had an engineering team of 20. We had 2.'"
+menu_of_services:
+  title: "Menu of Services"
+  subtitle: "A la carte services to get you to the next level."
+  starters_title: "Starters"
+  entrees_title: "Entrees"
 why_we_do_it:
   title: "Why We're Doing This"
   intro: "Because we love this sh*t."

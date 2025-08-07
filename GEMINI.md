@@ -42,4 +42,6 @@ The following scripts are defined in `package.json`:
 - ✅ move the form to its own page and in its place in the home page put "Coming soon"
 - ✅ remove the border around the section that begins with "Describe the core user flows of your application."
 - ✅ Refactor texts our of layout/index.html and into a new data/index.yaml file
-- 
+- ✅ Add a new section to the home page called "Menu of Services".
+- ✅ Change "Request Analysis & quote" to "Menu of Services" and change the link to the menu's anchor
+
