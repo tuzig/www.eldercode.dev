@@ -236,22 +236,28 @@
     </div>
   </section>
 
-  <section id="rfq" class="py-20 bg-dark-surface border-t border-dark-border">
+  <section id="coming-soon" class="py-20 bg-dark-surface border-t border-dark-border">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-12 animate-fade-up">
-          <h2 class="text-5xl font-display font-bold mb-6">{{ .Site.Data.index.ready_to_scale.title }}</h2>
+          <h2 class="text-5xl font-display font-bold mb-6">Coming Soon</h2>
           <p class="text-lg text-dark-text-secondary mb-8">
-            {{ .Site.Data.index.ready_to_scale.description }}
+            launching this september
           </p>
-          <div class="text-center">
-            <div class="inline-block bg-gradient-to-r from-cyan to-purple-500 p-[2px] rounded-lg">
-              <div class="bg-dark-bg px-8 py-4 rounded-lg">
-                <p class="text-2xl font-display font-bold text-gradient-cyan">{{ .Site.Data.index.ready_to_scale.coming_soon.title }}</p>
-                <p class="text-dark-text-secondary text-sm mt-2">{{ .Site.Data.index.ready_to_scale.coming_soon.description }}</p>
-              </div>
+          <form name="coming-soon" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+            <input type="hidden" name="form-name" value="coming-soon" />
+            <p class="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
+            <div class="flex justify-center items-center gap-4">
+              <input type="email" name="email" placeholder="Your email" class="bg-dark-bg border border-dark-border rounded-md px-4 py-3 text-lg text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-cyan" required>
+              <button type="submit" class="text-lg px-8 py-4 bg-gradient-to-r from-cyan to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-dark-bg font-mono uppercase tracking-wide rounded-md border-0 cursor-pointer">
+                Keep Me Posted
+              </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
