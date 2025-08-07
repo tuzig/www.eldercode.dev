@@ -33,11 +33,4 @@ This project is the official website for ElderCode services, a service that tran
 
 ## TODO 
 
-- ✅ move the form to its own page and in its place in the home page put "Coming soon"
-- ✅ remove the border around the section that begins with "Describe the core user flows of your application."
-- ✅ Refactor texts our of layout/index.html and into a new data/index.yaml file
-- ✅ Add a new section to the home page called "Menu of Services".
-- ✅ Change "Request Analysis & quote" to "Menu of Services" and change the link to the menu's anchor
-- ✅ Reformat the menu section:
--- Bring the delivery time up to the Item menu, keeping it's own style
--- Below "Menu of Services", reformat the line as a menu item. the dish is "A la carte services to get you to the next level" and "<delivery time>" is the delivery time
+- Replace "Ready to Scale up" With "Coming Soon" and a subtitle: "launching this september" And a single field form the email with a button: "Keep Me Posted". 
