@@ -109,6 +109,10 @@
 }
 
 @layer utilities {
+  .price-tag {
+    min-width: 8em;
+    text-align: right;
+  }
   .text-balance {
     text-wrap: balance;
   }

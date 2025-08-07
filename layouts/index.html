@@ -197,15 +197,24 @@
 
       <div class="max-w-4xl mx-auto bg-dark-surface border border-dark-border rounded-lg shadow-lg">
         <div class="p-8">
+          <div class="grid gap-6 mb-8">
+            {{ range .Site.Data.menu.a_la_carte }}
+            <div class="flex justify-between items-center border-b border-dashed border-dark-border pb-4">
+              <div>
+                <p class="text-lg font-semibold text-dark-text-primary">{{ .item }} <span class="text-sm text-dark-text-secondary">{{ .delivery }}</span></p>
+              </div>
+              <p class="text-lg font-mono text-cyan price-tag">{{ .price }}</p>
+            </div>
+            {{ end }}
+          </div>
           <h3 class="text-3xl font-display font-bold text-center mb-8 text-cyan tracking-widest uppercase">{{ .Site.Data.index.menu_of_services.starters_title }}</h3>
           <div class="grid gap-6">
             {{ range .Site.Data.menu.starters }}
             <div class="flex justify-between items-center border-b border-dashed border-dark-border pb-4">
               <div>
-                <p class="text-lg font-semibold text-dark-text-primary">{{ .item }}</p>
-                <p class="text-sm text-dark-text-secondary">{{ .delivery }}</p>
+                <p class="text-lg font-semibold text-dark-text-primary">{{ .item }} <span class="text-sm text-dark-text-secondary">{{ .delivery }}</span></p>
               </div>
-              <p class="text-lg font-mono text-cyan">{{ .price }}</p>
+              <p class="text-lg font-mono text-cyan price-tag">{{ .price }}</p>
             </div>
             {{ end }}
           </div>
@@ -216,10 +225,9 @@
             {{ range .Site.Data.menu.tbd }}
             <div class="flex justify-between items-center border-b border-dashed border-dark-border pb-4">
               <div>
-                <p class="text-lg font-semibold text-dark-text-primary">{{ .item }}</p>
-                <p class="text-sm text-dark-text-secondary">{{ .delivery }}</p>
+                <p class="text-lg font-semibold text-dark-text-primary">{{ .item }} <span class="text-sm text-dark-text-secondary">{{ .delivery }}</span></p>
               </div>
-              <p class="text-lg font-mono text-purple-400">{{ .price }}</p>
+              <p class="text-lg font-mono text-purple-400 price-tag">{{ .price }}</p>
             </div>
             {{ end }}
           </div>

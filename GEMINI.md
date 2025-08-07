@@ -9,9 +9,7 @@ This project is the official website for ElderCode services, a service that tran
 - **Build Tool:** Hugo
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS with `tailwindcss-animate`
-- **UI Components:**
-    - A combination of custom components and primitives from Radix UI.
-    - The structure suggests the use of `shadcn/ui` conventions (e.g., `components/ui`, `lib/utils.ts`).
+- **UI:** Go HTML templates with Tailwind CSS.
 - **Forms:** netlify forms
 - **Linting:** ESLint
 
@@ -23,12 +21,9 @@ This project is the official website for ElderCode services, a service that tran
 
 ## Project Structure Highlights
 
-- `src/main.tsx`: The main entry point of the application.
-- `src/App.tsx`: The root component of the application.
-- `src/pages/`: Contains the main page components (`Index.tsx`, `NotFound.tsx`).
-- `src/components/ui/`: Contains reusable, generic UI components (e.g., Button, Card, Input), following `shadcn/ui` patterns.
-- `src/components/sections/`: Contains larger, page-specific sections composed from the UI components (e.g., HeroSection, ServicesSection).
-- `public/`: Contains static assets like `favicon.ico` and `robots.txt`.
+- **Content:** Markdown files in `content/` and data in `data/*.yaml`.
+- **Layout:** Go HTML templates in `layouts/`.
+- **Styling:** Tailwind CSS configured in `tailwind.config.js` and `assets/css/`.
 
 ## Local Development
 - The dev server runs on `http://localhost:1313`
@@ -43,3 +38,6 @@ This project is the official website for ElderCode services, a service that tran
 - ✅ Refactor texts our of layout/index.html and into a new data/index.yaml file
 - ✅ Add a new section to the home page called "Menu of Services".
 - ✅ Change "Request Analysis & quote" to "Menu of Services" and change the link to the menu's anchor
+- ✅ Reformat the menu section:
+-- Bring the delivery time up to the Item menu, keeping it's own style
+-- Below "Menu of Services", reformat the line as a menu item. the dish is "A la carte services to get you to the next level" and "<delivery time>" is the delivery time
